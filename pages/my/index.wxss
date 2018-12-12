@@ -1,0 +1,257 @@
+page {
+  background-color: #ededed;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loginButton{
+  width: 181rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  background: #fff;
+  text-align: center;
+  color: #1c5d8e;
+  font-size: 28rpx;
+  border-radius: 0;
+  border: none; 
+}
+.loginButton::after{
+  border-radius: 0;
+}
+.index-header {
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  position: relative;
+  width: 100%;
+  height: 10.875rem;
+}
+<<<<<<< HEAD
+=======
+.smallBell{
+  position: absolute;
+  top: 11rpx;
+  right: 24rpx;
+  width: 38rpx;
+  height: 48rpx;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+}
+.smallBell image{
+  width: 100%;
+  height: 100%;
+}
+.sb_num{
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 23rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 48rpx;
+}
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+.index-header .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.index-header .bg image{
+  width: 100%;
+  height: 100%;
+}
+.userinfo{ 
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tx{
+  width: 143rpx;
+  height: 143rpx;
+  border-radius:50%;
+  overflow: hidden;
+  margin: 0 auto 25rpx auto;
+}
+.tx_def{
+  background: #fff;
+}
+.tx image {
+  width: 100%;
+  height: 100%;
+}
+.userText{
+  display: flex;
+  flex-direction: column;
+}
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #fff;
+}
+.userinfo-member{
+  font-size: 24rpx;
+  color: #efd62d;
+  margin-top: 15rpx;
+}
+
+<<<<<<< HEAD
+=======
+.options{
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 24rpx;
+}
+.opt{
+  width: 33.33%;
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30rpx;
+  padding-bottom: 35rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.opt_hr{
+  width: 1rpx;
+  height: 91rpx;
+  background: #dbdbdb;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.opt_top{
+  width: 72rpx;
+  height: 72rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.opt_top image{
+  width: 100%;
+  height: 100%;
+}
+.opt_bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ob_text1{
+  font-size: 24rpx;
+  color: #898989;
+}
+.ob_text2{
+  font-size: 36rpx;
+  color: #ea2c1e;
+  line-height: 30rpx;
+  margin: 0 5rpx;
+}
+
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+.box {
+  background-color: #fff;
+  width: 100%;
+  height: 88rpx;
+  padding: 23rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+  position: relative;
+}
+.box:first-child{
+  border-bottom: none;
+  margin-bottom: 16rpx;
+}
+.box:last-child{
+  border-bottom: none;
+}
+.box_left{
+  display: flex;
+  flex-direction: row;
+  color: #424141;
+  font-weight: 400;
+}
+.box_right{
+  display: flex;
+  flex-direction: row;
+  color: #5d5d5d;
+<<<<<<< HEAD
+=======
+  font-size: 26rpx;
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+}
+.br_icon{
+  width: 15rpx;
+  height: 33rpx;
+  margin: auto 0;
+  margin-left: 18rpx;
+  display: flex;
+  flex-direction: column;
+}
+.br_icon image{
+  width: 100%;
+  height: 100%;
+}
+.br_text{
+  color: #5d5d5d;
+  font-size: 26rpx;
+}
+.bl_title{
+  color: #424141;
+  font-size: 30rpx;
+}
+.bl_con{
+  color: #5d5d5d;
+  font-size: 0.9375rem;
+  display: flex;
+  flex-direction: row;
+}
+.is_activate_no{
+  color: #5d5d5d;
+  font-size: 0.8125rem;
+  line-height: 1.3rem;
+}
+.blc_icon{
+  width: 1rem;
+  height: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  margin: auto .2rem auto 0;
+}
+.blc_icon image{
+  width: 100%;
+  height: 100%;
+}
+
+.text-tel {
+  color: #ceced1;
+  text-align: center;
+  font-size: 25rpx;
+<<<<<<< HEAD
+  margin: 30rpx;
+=======
+  margin: 10rpx;
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+}

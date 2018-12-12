@@ -1,0 +1,192 @@
+<view class='main'>
+  <view class='hotel'>
+    <view class='con'>
+      <view class='hc_l'>
+        <text class='hcl_t'>{{hotel.name}}</text>
+        <text class='hcl_b' wx:if='{{hotel.addr != null}}'>{{hotel.addr}}</text>
+      </view>
+    </view>
+    <view class='con con_list'>
+      <view class='con_l'>
+        <view class='roomName'>{{hotel.roomName}}</view>
+        <view class='con_date'>
+          <view class='cd_start'>入住:{{hotel.startTime}}(周五)</view>
+          <view class='cd_end'>离店:{{hotel.endTime}}(周六)</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='hotel people'>
+    <view class='peo_con'>
+      <view class='peo_con_l'>
+        <view class='pc_l'>房间数：</view>
+        <picker bindchange="roomNumChange" value="{{index}}" range="{{roomNumList}}">
+          <view class="picker">
+            {{chooseNight}}间
+          </view>
+        </picker>
+      </view>
+      <view class='more'>
+        <image src='../../images/youjiantou.png'></image>
+      </view>
+    </view>
+    <view class='peo_con'>
+      <view class='peo_con_l'>
+        <view class='pc_l'>预订人：</view>
+        <input type='tel' value='{{people_name}}' bindblur='nameBlur' placeholder='请输入预订人姓名'></input>
+      </view>
+    </view>
+    <view class='peo_con'>
+      <view class='peo_con_l'>
+        <view class='pc_l'>联系电话：</view>
+        <input type='number' value='{{people_tel}}' bindblur='telBlur' placeholder='请输入电话号码'></input>
+      </view>
+    </view>
+    <view class='peo_con'>
+      <view class='peo_con_l'>
+        <view class='pc_l'>预计到店：</view>
+        <picker id='time' mode="time" value="{{arriveTime}}" start="{{starTime}}" end="{{maxTime}}" bindchange="bindTimeChange">
+          <view class="picker">
+            {{arriveTime}}
+            <text class='people_text'>之前(不影响酒店留房)</text>
+          </view>
+        </picker>
+      </view>
+      <view class='more'>
+        <image src='../../images/youjiantou.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='hotel cards'>
+    <view class='preferential' wx:if="{{discountsMoney > 1}}">
+      <view class='check'>
+        <label class="test">
+          <checkbox-group bindchange="checkboxChange">
+            <checkbox checked="{{discountsCheck}}" />
+          </checkbox-group>
+
+        </label>
+      </view>
+
+      <view class='preferential_money_con'>
+        <view class='preferential_money'>{{discountsMoney}}元 </view>
+        优惠券
+      </view>
+
+
+    </view>
+    <view class='cardTitle'>付款方式</view>
+    <view id='r0' class='card_con' bindtap='payChoose'>
+      <view class='cc_l'>
+        <view class='ccl_icon'>
+          <image src='../../images/weChat.png'></image>
+        </view>
+        <view class='ccl_text'>微信支付</view>
+      </view>
+      <view class='cc_r' wx:if='{{choosePay[0]}}'>
+        <image src='../../images/radio_true.png'></image>
+      </view>
+      <view class='cc_r' wx:else>
+        <image src='../../images/radio_false.png'></image>
+      </view>
+    </view>
+    <view wx:if='{{is_sharetime == 1}}'>
+      <view id='r1' class='card_con' bindtap='payChoose' wx:if='{{totalMoney <= integral && discountsCheck == false  }}'>
+        <view class='cc_l'>
+          <view class='ccl_icon'>
+            <image src='../../images/dou.png'></image>
+          </view>
+          <view class='ccl_text'>易用豆支付
+            <text style='color:red;font-size:25rpx'>({{integral}})</text>
+          </view>
+        </view>
+        <view class='cc_r' wx:if='{{choosePay[1]}}'>
+          <image src='../../images/radio_true.png'></image>
+        </view>
+        <view class='cc_r' wx:else>
+          <image src='../../images/radio_false.png'></image>
+        </view>
+      </view>
+      <view id='r2' class='card_con' wx:else>
+        <view class='cc_l'>
+          <view class='ccl_icon'>
+            <image src='../../images/dou-no.png'></image>
+          </view>
+          <view class='ccl_text cantchooseText'>易用豆支付
+            <text style='color:#a03232;font-size:24rpx'>({{integral}})</text>
+          </view>
+        </view>
+        <view class='cc_r' wx:if='{{choosePay[1]}}'>
+          <image src='../../images/radio_true.png'></image>
+        </view>
+        <view class='cc_r' wx:else>
+          <image src='../../images/radio_false.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='footer'>
+    <view class='fl' bindtap='detailed'>
+      <view class='fl_l'>
+        总价
+        <view class='fl_money'>
+          ￥
+
+          <!-- <view class='money' wx:if='{{discountsMoney > totalMoney && discountsCheck   }}' >0.00</view>
+          <view class='money' wx:if='{{ totalMoney > discountsMoney && discountsCheck }}'>{{totalMoney - discountsMoney}}</view>
+          <view class='money' wx:else>{{totalMoney}}</view> -->
+<wxs module="util">
+    var joinArray = function(num1,num2){
+          var num = num1 - num2;
+          return num.toFixed(2);
+    }
+
+    module.exports = {
+        joinArray: joinArray
+    }
+</wxs>
+
+
+          <view class='money' wx:if='{{discountsMoney >=  totalMoney && discountsCheck}}'>0.00</view>
+          <view class='money' wx:elif='{{totalMoney > discountsMoney && discountsCheck}}'>{{util.joinArray(totalMoney,discountsMoney)}}</view>
+          <view class='money' wx:else>{{totalMoney}}</view>
+
+        </view>
+      </view>
+      <view class='after_money'>
+
+        <!-- <view class='money' wx:if="{{discountsMoney >= totalMoney }}" >0.00</view> -->
+        <view class='money' wx:if="{{discountsMoney > 1 && discountsCheck }}">{{totalMoney}}</view>
+      </view>
+      <view class='{{rdClick?"fl_r clickDetailed":"fl_r flr_icon"}}'>
+        <image src='../../images/down.png'></image>
+      </view>
+    </view>
+    <form class='button' report-submit='true' bindsubmit="pay">
+      <button formType="submit">提交订单</button>
+      <!-- <view class='button' bindtap='pay'>提交订单</view> -->
+    </form>
+  </view>
+  <view class='bc' wx:if='{{rdClick}}' bindtap='unshow'></view>
+  <view class='bc2' wx:if='{{cantClick}}'></view>
+  <!-- 明细弹出层 -->
+  <view class='eject' wx:if='{{rdClick}}'>
+    <view class='e_title'>{{hotel.roomName}}</view>
+    <view class='e_content'>
+      <view class='e_con' wx:for="{{chooseList}}" wx:key="unique">
+        <view class='ec_left'>{{item.date}}</view>
+        <view class='ec_right'>
+          <view class='ecr_con ecr_l'>{{chooseNight}}间</view>
+          <view class='ecr_icon'>*</view>
+          <view class='ecr_con ecr_c'>￥{{item.price}}</view>
+          <view class='ecr_icon'>=</view>
+          <view class='ecr_con ecr_r'>￥{{chooseNight*item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

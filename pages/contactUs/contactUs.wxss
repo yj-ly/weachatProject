@@ -1,0 +1,105 @@
+page{
+  width: 100%;
+  height: 100%;
+  background: #ececec;
+  position: relative;
+}
+.cu_main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contentList{
+  width: 100%;
+  height: 85%; 
+  overflow-y: scroll; 
+}
+.con{
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 20rpx 24rpx;
+  margin-top: 24rpx; 
+  display: flex;
+  flex-direction: column;
+}
+.con_top{
+  display: flex;
+  flex-direction: row;
+}
+.ct_left{
+  width: 67rpx;
+}
+.jt{
+  width: 47rpx;
+  height: 47rpx;
+  display: flex;
+  flex-direction: column;
+  animation: jtMove2 .2s forwards; 
+}
+.jt image{
+  width: 100%;
+  height: 100%;
+}
+.jt_choose{
+  animation: jtMove .2s forwards; 
+}
+@keyframes jtMove{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(90deg);}
+}
+@keyframes jtMove2{
+  from {transform: rotate(90deg);}
+  to {transform: rotate(0deg);}
+}
+.ct_right{
+  max-width: 634rpx;
+  text-align: left;
+  font-size: 32rpx;
+  color: #444444;
+}
+.con_bottom{
+  padding-left: 67rpx;
+  box-sizing: border-box; 
+  text-align: left;
+  font-size: 28rpx;
+  color: #747474;
+  height: 0rpx;
+  overflow-y: hidden;
+}
+.con_bottom view{
+  padding-top: 20rpx;
+  border-top: 2rpx solid #ececec;
+}
+.con_bottom_choose{
+  height: auto;
+}
+.button{
+  width: 100%;
+  height: 15%;
+}
+button{
+  width: 504rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 36rpx;
+  color: #fff;
+  background: #f13f4f;
+  text-align: center;
+  margin: 0 auto 17rpx auto;
+  border-radius: 0;
+}
+button::after{
+  border-radius: 0;
+}
+.tel{
+  font-size: 26rpx;
+  width: 100%;
+  text-align: center;
+  color: #646464;
+}
+button:active{
+  color: #fff;
+  background: #f13f4f;
+}

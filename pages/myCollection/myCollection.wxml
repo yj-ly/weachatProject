@@ -1,0 +1,58 @@
+<view class='main'>
+  <view class='bc' wx:if='{{showDelete}}' bindtap='noShowDelete'></view>
+  <view class='delete_div' wx:if='{{showDelete}}'>
+    <view class='dd_top'>是否确定取消收藏？</view>
+    <view class='dd_bottom'>
+      <view class='ddb_botton ddbb_1'>确定</view>
+      <view class='ddb_botton ddbb_2' bindtap='noShowDelete'>取消</view>
+    </view>
+  </view>
+  <view class='changeShow_2'>
+    <view class='content' class='{{hotelList.length > 0?"content":"content content_null"}}'>
+      <view class='hotel_con' wx:if='{{hotelList.length > 0}}' data-hotelId='{{item.hotel_id}}' wx:for-item="item" wx:for="{{hotelList}}" wx:key="unique">
+        <view class='click_bc' bindtap='deleteClick'></view>
+        <view class='click_bc2' bindtap='toDetail'></view>
+        <view class='hotel_img'>
+          <image src='{{item.img}}'></image>
+        </view>
+        <view class='hotel_content'>
+          <view class='hc_left'>
+            <view class='hcl_1' wx:if='{{item.hotel_name != null}}'>
+              <view class='hcl1_left'>
+                <view class='hotel_name'>{{item.hotel_name}}</view>
+                <view class='hotel_evaluate'>{{item.score}}</view>
+              </view>
+              <view class='delete'><image src='../../images/delete.png'></image></view>
+            </view>
+            <view class='hcl_label'>
+              <view class='labels' wx:for-item="item_label" wx:for="{{item.label}}" wx:key="unique">{{item_label}}</view>
+            </view>
+            <view class='hcl_2' wx:if='{{item.tel != null}}'>
+              <view class='hotel_icon'>
+                <image src='../../images/tel_new.png'></image>
+              </view>
+              <view class='hotel_tel'>{{item.tel}}</view> 
+            </view>
+            <view class='hcl_3' wx:if='{{item.addr != null}}'>
+              <view class='hcl3_left'>
+                <view class='hotel_icon_addr'>
+                  <image src='../../images/addr_new.png'></image>
+                </view>
+                <view class='hotel_addr'>{{item.addr}}</view> 
+              </view>
+              <view class='hcr_con' wx:if='{{item.price != null}}'>
+                <view class='hcrc_l'>￥</view>
+                <view class='hcrc_c'>{{item.price}}</view>
+                <view class='hcrc_r'>起</view>
+              </view> 
+            </view>
+          </view>
+        </view> 
+      </view>
+      <view class='hotel_null' wx:if='{{hotelList.length == 0 && !logoShow}}'>
+        <view class='hn_icon'><image src='../../images/hotel_null.png'></image></view>
+        <view class='hn_text'>暂无酒店信息</view>
+      </view>
+    </view>
+  </view>
+</view>

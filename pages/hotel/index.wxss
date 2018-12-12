@@ -1,0 +1,185 @@
+page {
+  background-color: #ececec;
+}
+.index-header {
+  width: 100%;
+  height: 350rpx;
+  position: relative;
+}
+.index-header image{
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index-body{
+  width: 100%;
+  padding: 36rpx 86rpx 52rpx 86rpx;
+  box-sizing: border-box;
+}
+
+.addres{
+  color: #ceced1;
+  height: 94rpx;
+  margin: 0 !important;
+  padding: 0 50rpx;
+}
+.addrInput{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx solid #f1f1f1;
+  margin-top: auto;
+}
+.box {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 1rpx solid #aaaaaa;
+}
+
+.box-item {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx; 
+}
+
+.titleView{
+  background: #f9f9f9;
+  margin: 0;
+  width: 575rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 32rpx;
+  box-sizing: border-box;
+}
+.titleView .box-row{
+  margin: 0
+}
+
+#hotel_input{
+  color: #939393;
+  font-size: 24rpx;
+}
+
+.title{
+  font-size: 36rpx;
+  font-weight: 400;
+  color: #5e5d5d;
+}
+
+.date{
+  color: #ceced1;
+  margin: 0;
+  height: 238rpx;
+  font-size: 30rpx;
+}
+
+.box-row {
+  margin: 10rpx;
+  display: flex;
+  flex-direction: column; 
+}
+.box-row view {
+  margin: 10rpx;
+}
+.dateCon{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.timeChoose{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 89rpx;
+  box-sizing: border-box;
+}
+.chooseTime{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 89rpx;
+}
+.numNight{
+  width: 109rpx;
+  height: 109rpx; 
+  text-align: center;
+  line-height: 109rpx;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2272a5;
+  border-radius: 50%; 
+  color: #5c5c5c;
+  font-size: 24rpx;
+}
+
+.chooseTime .ct_text{
+  text-align: center;
+  color: #5c5c5c;
+  font-size: 22rpx;
+}
+
+.chooseTimeText{
+  width: 100%;
+  text-align: center;
+} 
+
+picker{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #939393;
+  font-size: 30rpx;
+  margin-top: 13rpx;
+}
+
+button {
+  width: 478rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #2272a5;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.text-tel {
+  color: #ceced1;
+  text-align: center;
+  font-size: 22rpx;
+  margin: 20rpx auto 52rpx auto;
+}
+
+.index-footer{
+  margin: 0 auto 50rpx auto;
+  position: relative;
+}
+
+.index-footer .text-tel{
+  margin: 0;
+}
+
+.if_left{
+  height: 1px;
+  width: 60rpx;
+  background: #aaaaaa;
+  position: absolute;
+  top: 14rpx;
+  left: -86rpx;
+}
+
+.if_right{
+  height: 1px;
+  width: 60rpx;
+  background: #aaaaaa;
+  position: absolute;
+  top: 14rpx;
+  right: -86rpx;
+}

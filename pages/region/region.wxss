@@ -1,0 +1,98 @@
+page{
+  width: 100%;
+  height: 100%;
+  background: #ececec;
+}
+.main{
+  width: 100%;
+  height: 100%;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+/* 当前定位 */
+.currentLocation,.hotCiTyList,.initialsCiTyList,.rightList{
+  display: flex;
+  flex-direction: column;
+}
+.CL_title,.HCL_title,.il_title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #555555;
+  padding: 0 24rpx;
+  box-sizing: border-box; 
+}
+.CL_content,.il_citys{
+  background: #fff;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 24rpx;
+  font-size: 32rpx;
+  color: #555555;
+  text-align: left;
+}
+/* 热门城市 */
+.HCL_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.hl_con{
+  min-width: 202rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  text-align: center;
+  color: #555555;
+  font-size: 32rpx;
+  background: #fff;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  margin-right: 24rpx;
+  margin-bottom: 24rpx;
+}
+/* 子母分类列表 */
+.il_con{
+  display: flex;
+  flex-direction: column;
+}
+.il_citys{
+  padding-right: 0;
+  overflow: hidden;
+  position: relative;
+}
+.hr{
+  width: 100%;
+  height: 1rpx;
+  background: #ececec;
+  position: absolute;
+  bottom: 1rpx;
+  left: 24rpx;
+}
+/* 右侧悬浮子母列表 */
+.rightList{
+  width: 44rpx;
+  position: fixed;
+  right: 13rpx;
+  top: 185rpx;
+  display: flex;
+  flex-direction: column;
+  background: #a3a3a3;
+  opacity: .8;
+  padding: 15rpx 0;
+  border-radius:50rpx;
+}
+.rl_con{
+  width: 44rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  color: #fff;
+  text-align: center;
+}

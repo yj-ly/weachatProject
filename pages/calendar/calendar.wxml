@@ -1,0 +1,27 @@
+<view class='main'>
+  <view class='bc' wx:if='{{showBc}}'></view>
+  <view class='title'>
+    <view class='title_con title_free'>日</view>
+    <view class='title_con'>一</view>
+    <view class='title_con'>二</view>
+    <view class='title_con'>三</view>
+    <view class='title_con'>四</view>
+    <view class='title_con'>五</view>
+    <view class='title_con title_free'>六</view>
+  </view>
+  <view class='content'>
+    <view class='con_mon' wx:for-index="index" wx:for="{{days}}" wx:key="unique">
+      <view class='mon'>{{item.mon}}</view>
+      <view class='cons'>
+        <view class='{{items.choose?"con_days con_days_choose":"con_days"}}' wx:for-index="ind" bindtap='dayClick'
+         wx:for="{{item.days}}" wx:key="unique" wx:for-item="items"
+         data-day='{{items}}' data-index='{{index}}' data-ind='{{ind}}'>
+          <view class='cons_top'>{{items.day}}</view>
+          <view class='cons_bottom' wx:if='{{index == startDay[0] && ind == startDay[1]}}'>入住</view>
+          <view class='cons_bottom' wx:if='{{index == endDay[0] && ind == endDay[1]}}'>离店</view>
+          <view class='cons_bottom' wx:if='{{index != startDay[0] && ind != startDay[1] && index != endDay[0] && ind != endDay[1]}}'></view>
+         </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class='index_main'>
+  <view class='bc' wx:if='{{canGo}}' bindtap='goNext'></view>
+  <!-- <view class='index_close'><image src='../../images/index_close.png'></image></view> -->
+  <view class='im_bc'><image src='../../images/index_main.png'></image></view>
+  <view class='hotel'>
+    <view class='hotel_left' style='{{last_hotel.name == undefined?"opacity:0":"opacity:1"}}'>
+      <view class='hl_hr text' wx:if='last_hotel.name != undefined'></view>
+    </view>
+    <view class='hotel_text'><text class='text' wx:if='last_hotel.name != undefined'>{{last_hotel.name}}</text></view>
+    <view class='hotel_right' style='{{last_hotel.name == undefined?"opacity:0":"opacity:1"}}'>
+      <view class='hl_hr text' wx:if='last_hotel.name != undefined'></view>
+    </view>
+  </view>
+  <view class='points'>
+    <view class='pi_content'>
+      <view class='pc_con'><view class='point point_1'></view></view>
+      <view class='pc_con'><view class='point point_2'></view></view>
+      <view class='pc_con'><view class='point point_3'></view></view>
+    </view>
+  </view>
+  <view class='loadingText'>加载中...</view>
+</view>

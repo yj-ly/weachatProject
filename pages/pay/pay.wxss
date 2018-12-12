@@ -1,0 +1,427 @@
+/* pages/pay/pay.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background: #ececec;
+}
+.main{
+  width: 100%;
+  padding-bottom: 98rpx;
+  background: #ececec;
+  position: relative;
+}
+
+/*酒店板块*/
+.hotel{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  margin-bottom: 16rpx;
+}
+.hotel .con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px dashed #b2b2b2;
+}
+.hotel .con:last-child{
+  border-bottom: none;
+}
+.hc_l{
+  display: flex;
+  flex-direction: column;
+}
+.hcl_t{
+  font-size: 36rpx;
+  color: #424141;
+  margin-bottom: 25rpx;
+  font-weight: 600;
+}
+.hcl_b{
+  font-size: 28rpx;
+  color: #616161;
+}
+.hc_r{
+  width: 0.5625rem;
+  height: 0.875rem;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+}
+.hc_r image{
+  width: 100%;
+  height: 100%;
+}
+.con_list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.con_l{
+  display: flex;
+  flex-direction: column;
+}
+.roomName{
+  display: flex;
+  flex-direction: row;
+  color: #424141;
+  font-size: 32rpx;
+  margin-bottom: 23rpx;
+  font-weight: 600
+}
+.rn_num{
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  line-height: 45rpx;
+}
+.con_date{
+  display: flex;
+  flex-direction: row;
+}
+.cd_start{
+  color: #5d5d5d;
+  font-size: 28rpx;
+}
+.cd_end{
+  color: #5d5d5d;
+  font-size: 28rpx;
+  margin-left: 42rpx;
+}
+
+/*预定信息*/
+.people{
+  display: flex;
+  flex-direction: column;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.peoTitle{
+  color: #424141;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  font-weight: 600;
+}
+.peo_con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 22rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.peo_con:last-child{
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.peo_con_l{
+  display: flex;
+  flex-direction: row;
+}
+.peo_con .more{
+  width: 12rpx;
+  height: 22rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+.peo_con .more image{
+  width: 100%;
+  height: 100%;
+}
+.pc_l{
+  width: 155rpx;
+  font-size: 28rpx;
+  color: #616161;
+  line-height: 60rpx;
+  text-align: left;
+  font-weight: 600;
+}
+input,picker{
+  width: 534rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #616161;
+  box-sizing: border-box;
+}
+.people_text{
+  font-size: 28rpx;
+  color: #616161;
+}
+picker .picker{
+  font-size: 28rpx;
+  color: #575757;
+}
+
+/*支付方式*/
+.cards{
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx;
+  margin-bottom: 0;
+}
+.cardTitle{
+  color: #424141;
+  font-size: 32rpx;
+  margin-bottom: 42rpx;
+  font-weight: 600;
+  margin: 20rpx 0 20rpx 0;
+}
+.card_con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 42rpx;
+}
+.card_con:last-child{
+  margin-bottom: 0;
+}
+.cc_l{
+  display: flex;
+  flex-direction: row;
+}
+.ccl_icon{
+  width: 46rpx;
+  height: 39rpx;
+  display: flex;
+  flex-direction: column;
+}
+.ccl_icon image{
+  width: 100%;
+  height: 100%;
+}
+.ccl_text{
+  color: #424141;
+  font-size: 30rpx;
+  margin-left: 18rpx;
+}
+.cantchooseText{
+  color: #949494;
+}
+.cc_r{
+  width: 42rpx;
+  height: 42rpx;
+  display: flex;
+  flex-direction: column;
+}
+.cc_r image{
+  width: 100%;
+  height: 100%;
+}
+
+/*脚部*/
+.footer{
+  width: 100%;
+  height: 98rpx;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  font-size: 32rpx;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.footer .fl{
+  width: 60%;
+  line-height: 98rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  padding: 0 26rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #ececec;
+  position: relative;
+}
+.footer .button{
+  width: 40%;
+  height: 100%;
+  line-height: 98rpx;
+  color: #fff;
+  background: #076299;
+  text-align: center;
+}
+.button button{
+  width: 100%;
+  height: 100%;
+  line-height: 98rpx;
+  color: #fff;
+  background: #076299;
+  text-align: center;
+  border-radius: 0;
+}
+.button button::after{
+  border-radius: 0;
+}
+.footer .fl .fl_l{
+  display: flex;
+  flex-direction: row;
+}
+.footer .fl .fl_l .fl_money{
+  display: flex;
+  flex-direction: row;
+  color: #f11c1c;
+}
+.footer .fl .fl_l .fl_money .money{
+  font-size: 46rpx;
+  line-height: 98rpx;
+}
+.footer .fl .fl_r{
+  display: flex;
+  flex-direction: column;
+  width: 13rpx;
+  height: 7rpx;
+  position: absolute;
+  top: 45rpx;
+  right: 35rpx;
+}
+.footer .fl .flr_icon{
+  transform: rotate(0deg);
+}
+.footer .fl .clickDetailed{
+  transform: rotate(180deg);
+}
+.fl_r image{
+  width: 100%;
+  height: 100%;
+}
+.fl_r image{
+  width: 100%;
+  height: 100%;
+}
+/*遮挡层*/
+.bc{
+  width: 100%;
+  height: calc(100% - 2.5rem);
+  background: #aaaaaa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: .8;
+  z-index: 9;
+}
+.bc2{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+/*弹出层*/
+.eject{
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 98rpx;
+  left: 0;
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.eject .e_title{
+  font-size: 30rpx;
+  color: #646464;
+  background: #e9e9e9;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.e_content{
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.e_con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f6f6f6;
+  line-height: 83rpx;
+}
+.e_con:last-child{
+  border-bottom: none;
+}
+.ec_left{
+  color: #646464;
+  font-size: 24rpx;
+  width: 100%;
+  height: 83rpx;
+}
+.ec_right{
+  display: flex;
+  flex-direction: row;
+}
+.ecr_con{
+  width: 114rpx;
+  height: 83rpx;
+  color: #646464;
+  font-size: 24rpx;
+  text-align: center;
+}
+.ecr_icon{
+  color: #646464;
+  font-size: 24rpx;
+}
+.ecr_r{
+  color: #f11c1c;
+}
+.preferential {
+  height: 74rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #cccccc;
+}
+.check {
+    padding: 0 24rpx 0 0;
+}
+.preferential_money_con {
+  display: flex;
+  font-size: 30rpx;
+  color: #333333;
+ 
+}
+.preferential_money {
+  font-size: 30rpx;
+    color: #f11c1c;
+   padding: 0 10rpx 0 0;
+}
+.after_money {
+     text-decoration:line-through;
+     font-size: 26rpx;
+     color: #797979;
+}
+
+checkbox .wx-checkbox-input{
+   border-radius: 50%;/* 圆角 */
+   width: 30rpx; /* 背景的宽 */
+   height: 30rpx; /* 背景的高 */
+   border: none;
+   border: 1px solid #066399;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border: 1px solid#066399;
+   background: #ffffff;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 40rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   color:red; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}

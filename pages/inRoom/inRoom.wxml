@@ -1,0 +1,91 @@
+<view class='main'>
+  <view class='title'>
+    <view class='t_top'>{{userName}}(先生/女士)你好</view>
+    <view class='t_bottom'>
+      <view class='tb_l'>
+        <view class='tbl_con'>已住：{{roomInfo.liveTime}}</view>
+        <view class='tbl_con'>入住时间：{{roomInfo.starTime}}</view>
+      </view>
+      <view class='tb_r'>
+        <view class='tbl_con'>已消费：￥{{roomInfo.consumption}}</view>
+        <view class='tbl_con'>预离时间：{{roomInfo.endTime}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='table_title'>
+    <view class='table table_1'>
+      <view class='table_con'>项目</view>
+      <view class='table_hr'></view>
+    </view>
+    <view class='table table_2'>
+      <view class='table_con'>时间</view>
+      <view class='table_hr'></view>
+    </view>
+    <view class='table table_3'>
+      <view class='table_con'>备注</view>
+      <view class='table_hr'></view>
+    </view>
+    <view class='table table_4'>
+      <view class='table_con'>状态</view>
+    </view>
+  </view>
+
+  <view class='tabs' wx:for='{{list}}' wx:key="und" wx:for-index="index" wx:for-item='item'>
+    <view class='tab tab_1'>{{item.operation}}</view>
+    <view class='tab tab_2'>{{item.time}}</view>
+    <view class='tab tab_3'>{{item.note}}</view>
+    <view class='tab tab_4'>{{item.status}}</view>
+  </view>
+
+  <view class='footer' bindtap='showB'>呼叫前台</view>
+
+  <view class='bc' wx:if='{{showBox}}'></view>
+
+  <view class='box' wx:if='{{showBox}}'>
+    <view class='box_title'>
+      <text class='bt_text'>呼叫前台</text>
+      <view class='close' bindtap='showB'><image src='../../images/close.png'></image></view>
+    </view>
+    <view class='box_content'>
+      <view class='bc_radios'>
+        <view class='bcr_con' id='0' bindtap='chooseRadios'>
+          <view class='{{chooseList[0]?"radio radio_true":"radio radio_false"}}'></view>
+          <view class='rad_con'>换房</view>
+        </view>
+        <view class='bcr_con' id='1' bindtap='chooseRadios'>
+          <view class='{{chooseList[1]?"radio radio_true":"radio radio_false"}}'></view>
+          <view class='rad_con'>续房</view>
+        </view>
+        <view class='bcr_con' id='2' bindtap='chooseRadios'>
+          <view class='{{chooseList[2]?"radio radio_true":"radio radio_false"}}'></view>
+          <view class='rad_con'>退房</view>
+        </view>
+        <view class='bcr_con' id='3' bindtap='chooseRadios'>
+          <view class='{{chooseList[3]?"radio radio_true":"radio radio_false"}}'></view>
+          <view class='rad_con'>清扫</view>
+        </view>
+        <view class='bcr_con' id='4' bindtap='chooseRadios'>
+          <view class='{{chooseList[4]?"radio radio_true":"radio radio_false"}}'></view>
+          <view class='rad_con'>加床</view>
+        </view>
+        <view class='bcr_con' id='5' bindtap='chooseRadios'>
+          <view class='{{chooseList[5]?"radio radio_true":"radio radio_false"}}'></view>
+          <view class='rad_con'>其他</view>
+        </view>
+      </view>
+
+      <view class='ramark'>
+        <view class='rm_title'>备注</view>
+        <view class='rm_input'>
+          <textarea bindblur="bindTextAreaBlur"/>
+        </view>
+      </view>
+
+      <view class='buttons'>
+        <view class='button' bindtap='userCall'>确定</view>
+        <view class='button' bindtap='showB'>取消</view>
+      </view>
+    </view>
+  </view>
+</view>

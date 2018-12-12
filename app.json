@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/index/index",
+<<<<<<< HEAD
+    "pages/calendar/calendar",
+    "pages/orderList/orderList",
+=======
+    "pages/myCollection/myCollection",
+    "pages/my/index",
+    "pages/orderList/orderList",
+    "pages/comment_center/comment_center",
+    "pages/comment/comment",
+    "pages/comment_success/comment_success",
+    "pages/hotelList/hotelList",
+    "pages/region/region",
+    "pages/calendar/calendar",
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+    "pages/search/search",
+    "pages/contactUs/contactUs",
+    "pages/orderDetail_noLive/orderDetail_noLive",
+    "pages/orderDetail_inLive/orderDetail_inLive",
+    "pages/orderDetail_done/orderDetail_done",
+    "pages/orderDetail_dai/orderDetail_dai",
+    "pages/orderDetail_cancel/orderDetail_cancel",
+<<<<<<< HEAD
+    "pages/my/index",
+    "pages/hotelList/hotelList",
+=======
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+    "pages/hotelDetail/hotelDetail",
+    "pages/activation/activation",
+    "pages/orderDetail_noPay/orderDetail_noPay",
+    "pages/hotel/index",
+    "pages/inRoom/inRoom",
+    "pages/douDetail/douDetail",
+<<<<<<< HEAD
+    "pages/rules/rules",
+    "pages/discount/discount",
+    "pages/pay/pay"
+   
+=======
+<<<<<<< HEAD
+    "pages/rules/rules"
+=======
+    "pages/rules/rules",
+    "pages/hotelIntroduction/hotelIntroduction",
+    "pages/payDone/payDone"
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+>>>>>>> 5a86af1827f6764d3201aea645b3ac7524bfa692
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#28293E",
+    "navigationBarTitleText": "住店分时",
+    "navigationBarTextStyle": "write",
+    "backgroundColor": "#F4F4F4"
+  },
+  "tabBar": {
+    "color": "#2a2a2a",
+    "selectedColor": "#2272a5",
+    "borderStyle": "#bcbcbc",
+    "list": [
+      {
+        "selectedIconPath": "images/hotel_s.png",
+        "iconPath": "images/hotel.png",
+        "pagePath": "pages/hotelList/hotelList",
+        "text": "酒店"
+      },
+      {
+        "selectedIconPath": "images/order_s.png",
+        "iconPath": "images/order.png",
+        "pagePath": "pages/orderList/orderList",
+        "text": "订单"
+      },
+      {
+        "selectedIconPath": "images/my_s.png",
+        "iconPath": "images/my.png",
+        "pagePath": "pages/my/index",
+        "text": "我"
+      }
+    ]
+  }
+ 
+  
+}

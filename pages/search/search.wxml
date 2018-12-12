@@ -1,0 +1,46 @@
+<!-- 搜索框 -->
+<view class='search_view'>
+  <view class='search_con'>
+    <view class='search_LY'></view>
+    <view class='search_center'>
+      <view class='search_input'>
+        <view class='bs_icon'>
+          <image src='../../images/search.png'></image>
+        </view>
+        <input class='search_text' type='text' placeholder='请输入酒店名称/关键字' bindinput='inputBlur' bindconfirm='inputBlur'></input>
+      </view>
+    </view>
+    <view class='search_RY'></view>
+  </view>
+   <view class='search_button' bindtap='searchClick'>搜索</view>
+</view>
+<!-- 历史记录 -->
+<view class='history' wx:if='{{historyList.length > 0}}'>
+  <view class='history_bc'>
+    <view class='history_title'>
+      <view class='history_hr'></view>历史记录
+    </view>
+  </view>
+  <view class='history_content'>
+    <view class='history_con' data-hotel='{{item}}' wx:for="{{historyList}}" wx:key="unique" bindtap='buttonClick'>
+      <view class='hc_L'></view>
+      <view class='hc_C'>{{item.name}}</view>
+      <view class='hc_R'></view>
+    </view>
+  </view>
+</view>
+<!-- 热门搜索 -->
+<view class='history hot' wx:if='{{hotList.length > 0}}'>
+  <view class='history_bc'>
+    <view class='history_title hot_title'>
+      <view class='history_hr hot_hr'></view>热门搜索
+    </view>
+  </view>
+  <view class='history_content'>
+    <view class='history_con' data-hotel='{{item}}' wx:for="{{hotList}}" wx:key="unique" bindtap='buttonClick'>
+      <view class='hc_L hot_L'></view>
+      <view class='hc_C hot_C'>{{item.name}}</view>
+      <view class='hc_R hot_R'></view>
+    </view>
+  </view>
+</view>

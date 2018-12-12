@@ -1,0 +1,63 @@
+<view class='discount_content'>
+  <view class='discount_tab'>
+    <!-- <view class='discount_item' >领券中心</view> -->
+    <view class='discount_item {{status ==1?"ac":""}}' bindtap="changeStatus" data-index='1'>未使用</view>
+    <view class='discount_item {{status ==3?"ac":""}}' bindtap="changeStatus" data-index='3'>已使用</view>
+    <view class='discount_item {{status ==2?"ac":""}}' bindtap="changeStatus" data-index='2 '>已过期</view>
+  </view>
+
+  <view class='main'>
+    <!-- 没有订单列表 -->
+    <view class='not_activity' wx:if="{{list.length == 0}}">
+      <!-- {{list.length}} -->
+      <view>空空如也...</view>
+    </view>
+
+    <!-- 活动券列表 -->
+    <view class='list_content' >
+      <view class='list_item' wx:for="{{list}}" wx:key="{{id}}">
+        <image src='../../images/juan.jpg' wx:if="{{item.status == 1 || item.status == 3 }}"></image>
+        <image src='../../images/not_juan.jpg' wx:if="{{item.status == 2}}"></image>
+        <view class='left'>
+
+          <view class='list_item_top'>
+            <view class='max_money'>{{item.money}}
+              <view class='unit'>
+                <view>元</view>
+              </view>
+            </view>
+            <view class='txt'>优惠券</view>
+          </view>
+          <view class='list_item_bottom'>
+            <view class='effective_date'>有效日期至 {{item.past_at}}</view>
+          </view>
+
+        </view>
+        <view class='right'>
+          <!-- <view class='use'>点击使用</view> -->
+          <view class='use already' wx:if='{{item.status == 3}}'>已使用</view>
+          <view class='use  past' wx:if='{{item.status == 2}}'>已过期</view>
+          <!-- <view class='arrows'>></view> -->
+        </view>
+
+      </view>
+
+
+    </view>
+
+  </view>
+
+  <view class='footer' wx:if="{{showLoading && list.length > 0 }}" >
+    <view class='footer_con'>
+      <view class='footer_con_icon'>
+        <image src='../../images/bottom_loading.png'></image>
+      </view>
+      <view class='footer_con_text'>拼命加载中...</view>
+    </view>
+  </view>
+  <view class='footer footer_null' wx:if='{{showNull && list.length > 0}}'>
+    <view class='footer_con'>
+      <view class='footer_con_text'>哦噢到底了</view>
+    </view>
+  </view>
+</view>

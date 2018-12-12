@@ -1,0 +1,48 @@
+<view class="index">
+  <view class="index-header">
+    <image src='../../images/homeBg.jpg'></image>
+  </view>
+  <view class="index-body">
+    <view class="box">
+      <view class="box-item titleView">
+        <view class="box-row">
+          <text class="title">立即预定</text>
+        </view>
+      </view>
+      <view class="box-item addres">
+        <view class="addrInput">
+          <input id='hotel_input' bindchange='inputChange' value='{{hotel_name}}' type='text' placeholder='请输入酒店名称/关键字'></input>
+        </view>
+      </view>
+      <view class="box-item date">
+        <view class='dateCon'>
+          <view class='timeChoose'>
+            <!-- <input placeholder='入住时间'></input>
+            <input placeholder='离开时间'></input> -->
+            <view class='chooseTime'>
+              <text class='ct_text'>入住时间</text>
+              <picker mode="date" value='startTime' start="{{startTime}}" end="{{maxTime}}" bindchange="testPickerS">
+                  <text class='chooseTimeText'>{{stText}}</text>
+              </picker>
+            </view>
+            <view class='numNight'>共{{toDays}}晚</view>
+            <view class='chooseTime'>
+              <text class='ct_text'>离开时间</text>
+              <picker mode="date" value='endTime' start="{{endTime}}" end="{{maxTime}}" bindchange="testPickerE">
+                  <text class='chooseTimeText'>{{etText}}</text>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+      <button bindtap='submit'>搜索房源</button>
+      <view class='text-tel'>客服热线：023-8655555</view>
+      <view class="index-footer">
+        <view class='if_left'></view>
+        <view class='text-tel'>住店分时，时间不清零！</view>
+        <view class='if_right'></view>
+      </view>
+    </view>
+
+  </view>
+</view>

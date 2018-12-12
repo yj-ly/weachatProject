@@ -1,0 +1,235 @@
+<view class='search_view'>
+<<<<<<< HEAD
+  <view class='{{hotel_name == ""?"search_con":"search_con search_con_Have"}}'>
+    <view class='{{hotel_name == ""?"search_center":"search_center search_center_Have"}}' bindtap='toSearch'>
+      <view class='search_input'>
+        <view class='bs_icon'>
+          <image src='../../images/search.png'></image>
+        </view>
+        <view class='search_text'>{{hotel_name_show}}</view>
+      </view>
+      <view class='search_LY'></view>
+      <view class='search_RY'></view>
+    </view>
+    <view class='serach_return' wx:if='{{hotel_name != ""}}' bindtap='searchReset'>重置</view>
+=======
+  <view class='search_con'>
+    <view class='search_center'>
+      <view class='search_input'>
+        <view class='search_addr' bindtap='toRegion'>
+          <view class='search_addr_text'>重庆</view>
+          <view class='down-arrow'>
+            <image src='../../images/search_jt.png'></image>
+          </view>
+        </view>
+        <view class='search_inp' bindtap='toSearch'>
+          <view class='bs_icon'>
+            <image src='../../images/search.png'></image>
+          </view>
+          <view class='search_text'>{{hotel_name_show}}</view>
+        </view>
+        <view class='search_time' bindtap='toCalendar'>
+          <view class='search_time_text'>
+            <view class='stt_con'>住 {{stText}}</view>
+            <view class='stt_con'>离 {{etText}}</view>
+          </view>
+          <view class='down-arrow down-arrow2'>
+            <image src='../../images/search_jt.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='serach_return' wx:if='{{hotel_name != ""}}' bindtap='searchReset'>重置</view> -->
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+  </view>
+</view>
+<!--筛选-->
+<view class='screen'>
+  <!-- 智能排序 -->
+  <view class='screen_con' id='cs_1' bindtap='click_screen' style='{{hrBoolean == 1?"color:#076299":"color:#4b4b4b"}}'>智能排序</view>
+  <!-- 离我最近 -->
+  <view class='screen_con' id='cs_2' bindtap='click_screen' style='{{hrBoolean == 2?"color:#076299":"color:#4b4b4b"}}'>离我最近</view>
+<<<<<<< HEAD
+  <!-- hr -->
+  <view class='{{hrBoolean == 1?"screen_hr_1":"screen_hr_2"}}'></view>
+</view>
+<!-- 列表 -->
+<view class='content' class='{{hotelList.length > 0?"content":"content content_null"}}'>
+  <view class='hotel_con' wx:if='{{hotelList.length > 0}}' data-hotelId='{{item.hotel_id}}' wx:for-item="item" wx:for="{{hotelList}}" wx:key="unique" bindtap='toDetail'>
+    <view class='hotel_img'>
+      <image src='{{item.img}}'></image>
+    </view>
+    <view class='hotel_content'>
+      <view class='hc_left'>
+        <view class='hcl_1' wx:if='{{item.hotel_name != null}}'>
+          <view class='hotel_name'>{{item.hotel_name}}</view>
+           <view class='hotel_distance' wx:if='{{item.distance != "" && item.distance != null}}'>{{item.distance}}</view> 
+        </view>
+        <view class='hcl_2' wx:if='{{item.tel != null}}'>
+          <view class='hotel_icon'>
+            <image src='../../images/tel_new.png'></image>
+          </view>
+           <view class='hotel_tel'>{{item.tel}}</view> 
+        </view>
+        <view class='hcl_3' wx:if='{{item.addr != null}}'>
+          <view class='hotel_icon_addr'>
+            <image src='../../images/addr_new.png'></image>
+          </view>
+           <view class='hotel_addr'>{{item.addr}}</view> 
+        </view>
+      </view>
+      <view class='hc_right' wx:if='{{item.price != null}}'>
+        <view class='hcr_con'>
+          <view class='hcrc_l'>￥</view>
+          <view class='hcrc_c'>{{item.price}}</view>
+          <view class='hcrc_r'>起</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='hotel_null' wx:if='{{hotelList.length == 0 && !logoShow}}'>
+    <view class='hn_icon'><image src='../../images/hotel_null.png'></image></view>
+    <view class='hn_text'>暂无酒店信息</view>
+  </view>
+</view>
+<view class='footer' wx:if="{{showLoading && hotelList.length > 0}}"> 
+  <view class='footer_con'>
+    <view class='footer_con_icon'><image src='../../images/bottom_loading.png'></image></view>
+    <view class='footer_con_text'>拼命加载中...</view>
+  </view>
+</view> 
+<view class='footer footer_null' wx:if='{{showNull && hotelList.length > 0}}'> 
+  <view class='footer_con'>
+    <view class='footer_con_text'>哦噢到底了</view>
+  </view>
+</view> 
+=======
+  <!-- 价格星级 -->
+  <view class='screen_con' id='cs_3' bindtap='click_screen' style='{{hrBoolean == 3?"color:#076299":"color:#4b4b4b"}}'>{{showPrice_text}}</view>
+  <!-- 切换按钮 -->
+  <view class='screen_icon' bindtap='changeShow'>
+    <view class='si_img'>
+      <image src='{{screen_icon == 1? "../../images/sort_icon_1.png":"../../images/sort_icon_2.png"}}'></image>
+    </view>
+  </view>
+  <!-- hr -->
+  <view class='{{hrCss}}'></view>
+  <!-- 价格星级 -->
+  <view class='showPrice' wx:if='{{showPrice}}'>
+    <view id='cs_4' class='sp_con' bindtap='click_screen'>价格从高到低</view>
+    <view id='cs_5' class='sp_con' bindtap='click_screen'>价格从低到高</view>
+    <view id='cs_6' class='sp_con' bindtap='click_screen'>星级从高到低</view>
+    <view id='cs_7' class='sp_con' bindtap='click_screen'>星级从低到高</view>
+  </view>
+</view>
+<!-- 列表 -->
+<!-- 纵向排版 -->
+<view class='changeShow_1' wx:if='{{screen_icon == 1}}'>
+  <view class='content' class='{{hotelList.length > 0?"content":"content content_null"}}'>
+    <view class='hotel_con' wx:if='{{hotelList.length > 0}}' data-hotelId='{{item.hotel_id}}' wx:for-item="item" wx:for="{{hotelList}}" wx:key="unique" bindtap='toDetail'>
+      <view class='hotel_img'>
+        <image src='{{item.img}}'></image>
+      </view>
+      <view class='hotel_content'>
+        <view class='hc_left'>
+          <view class='hcl_1' wx:if='{{item.hotel_name != null}}'>
+            <view class='hotel_name'>{{item.hotel_name}}</view>
+            <view class='hotel_evaluate'>{{item.score}}</view>
+          </view>
+          <view class='hcl_label'>
+            <view class='labels' wx:for-item="item_label" wx:for="{{item.label}}" wx:key="unique">{{item_label}}</view>
+          </view>
+          <view class='hcl_2' wx:if='{{item.tel != null}}'>
+            <view class='hotel_icon'>
+              <image src='../../images/tel_new.png'></image>
+            </view>
+            <view class='hotel_tel'>{{item.tel}}</view>
+          </view>
+          <view class='hcl_3' wx:if='{{item.addr != null}}'>
+            <view class='hotel_icon_addr'>
+              <image src='../../images/addr_new.png'></image>
+            </view>
+            <view class='hotel_addr'>{{item.addr}}</view>
+          </view>
+        </view>
+        <view class='hc_right'>
+          <view class='hotel_distance' wx:if='{{item.distance != "" && item.distance != null}}'>{{item.distance}}</view>
+          <view class='hcr_con' wx:if='{{item.price != null}}'>
+            <view class='hcrc_l'>￥</view>
+            <view class='hcrc_c'>{{item.price}}</view>
+            <view class='hcrc_r'>起</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='hotel_null' wx:if='{{hotelList.length == 0 && !logoShow}}'>
+      <view class='hn_icon'>
+        <image src='../../images/hotel_null.png'></image>
+      </view>
+      <view class='hn_text'>暂无酒店信息</view>
+    </view>
+  </view>
+</view>
+<!-- 横向排版 -->
+<view class='changeShow_2' wx:if='{{screen_icon == 2}}'>
+  <view class='content' class='{{hotelList.length > 0?"content":"content content_null"}}'>
+    <view class='hotel_con' wx:if='{{hotelList.length > 0}}' data-hotelId='{{item.hotel_id}}' wx:for-item="item" wx:for="{{hotelList}}" wx:key="unique" bindtap='toDetail'>
+      <view class='hotel_img'>
+        <image src='{{item.img}}'></image>
+      </view>
+      <view class='hotel_content'>
+        <view class='hc_left'>
+          <view class='hcl_1' wx:if='{{item.hotel_name != null}}'>
+            <view class='hcl1_left'>
+              <view class='hotel_name'>{{item.hotel_name}}</view>
+              <view class='hotel_evaluate'>4.8分 超赞</view>
+            </view>
+            <view class='hotel_distance' wx:if='{{item.distance != "" && item.distance != null}}'>{{item.distance}}</view>
+          </view>
+          <view class='hcl_label'>
+            <view class='labels' wx:for-item="item_label" wx:for="{{item.label}}" wx:key="unique">{{item_label}}</view>
+          </view>
+          <view class='hcl_2' wx:if='{{item.tel != null}}'>
+            <view class='hotel_icon'>
+              <image src='../../images/tel_new.png'></image>
+            </view>
+            <view class='hotel_tel'>{{item.tel}}</view>
+          </view>
+          <view class='hcl_3' wx:if='{{item.addr != null}}'>
+            <view class='hcl3_left'>
+              <view class='hotel_icon_addr'>
+                <image src='../../images/addr_new.png'></image>
+              </view>
+              <view class='hotel_addr'>{{item.addr}}</view>
+            </view>
+            <view class='hcr_con' wx:if='{{item.price != null}}'>
+              <view class='hcrc_l'>￥</view>
+              <view class='hcrc_c'>{{item.price}}</view>
+              <view class='hcrc_r'>起</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='hotel_null' wx:if='{{hotelList.length == 0 && !logoShow}}'>
+      <view class='hn_icon'>
+        <image src='../../images/hotel_null.png'></image>
+      </view>
+      <view class='hn_text'>暂无酒店信息</view>
+    </view>
+  </view>
+</view>
+<view class='footer' wx:if="{{showLoading && hotelList.length > 0}}">
+  <view class='footer_con'>
+    <view class='footer_con_icon'>
+      <image src='../../images/bottom_loading.png'></image>
+    </view>
+    <view class='footer_con_text'>拼命加载中...</view>
+  </view>
+</view>
+<view class='footer footer_null' wx:if='{{showNull && hotelList.length > 0}}'>
+  <view class='footer_con'>
+    <view class='footer_con_text'>哦噢到底了</view>
+  </view>
+</view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7

@@ -1,0 +1,152 @@
+<view class="index">
+  <!-- <view class="index-header" style="background-image: url('../../images/userbg.png');background-size:100% 100%;  background-repeat:no-repeat;"> -->
+  <view class="index-header">
+<<<<<<< HEAD
+=======
+    <view class='smallBell' bindtap='comingSoon'>
+      <view class='sb_num'>0</view>
+      <image src='../../images/samll-bell.png'></image>
+    </view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+    <view class='bg'>
+      <image src='../../images/userbg.png'></image>
+    </view>
+    <view class="userinfo">
+      <view wx:if="{{!hasUserInfo || userInfo.nickname == null}}">
+        <view class='tx tx_def'>
+          <image class="userinfo-avatar" src="../../images/defaultTX.png" background-size="cover"></image>
+        </view>
+        <button hover-class="none" class='loginButton' open-type="getUserInfo" bindgetuserinfo="getLogin"> 获取头像 </button>
+      </view> 
+      <view wx:else>
+        <view class='tx' bindtap='toActivation'
+          wx:if='{{userInfo.member.phone != undefined && userInfo.member.phone != "" && userInfo.member.phone != null}}'>
+          <image class="userinfo-avatar" src="{{userInfo.headimgurl}}" background-size="cover"></image>
+        </view>
+        <view class='tx' wx:else>
+          <image class="userinfo-avatar" src="{{userInfo.headimgurl}}" background-size="cover"></image>
+        </view>
+        <view class='userText'>
+          <text class="userinfo-nickname" wx:if='{{userInfo.member.name == null || userInfo.member.name == undefined}}'>{{userInfo.nickname}}</text>
+          <text class="userinfo-nickname" wx:else>{{userInfo.member.name}}</text>
+           <text class="userinfo-member" bindtap='toActivation'
+           wx:if='{{userInfo.member.phone == undefined || userInfo.member.phone == "" || userInfo.member.phone == null}}'>
+            会员资料完善>>
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+<<<<<<< HEAD
+  <view class="index-body"> 
+    <view class='box' wx:if='{{hasUserInfo}}'>
+=======
+  <view class="index-body">
+    <view class='options'>
+      <view class='opt'>
+        <view class='opt_top ot_dou'><image src='../../images/dou2.png'></image></view>
+        <view class='opt_bottom'>
+          <view class='ob_text1'>易用豆</view>
+          <view class='ob_text2'>{{userInfo.member.integral}}</view>
+          <view class='ob_text1'>颗</view>
+        </view>
+        <view class='opt_hr'></view>
+      </view>
+      <view class='opt' bindtap='comingSoon'>
+        <view class='opt_top ot_yue'><image src='../../images/wallet.png'></image></view>
+        <view class='opt_bottom'>
+          <view class='ob_text1'>余额</view>
+          <view class='ob_text2'>0</view>
+          <view class='ob_text1'>(元)</view>
+        </view>
+        <view class='opt_hr'></view>
+      </view>
+      <view class='opt' bindtap='comingSoon'>
+        <view class='opt_top ot_bankcard'><image src='../../images/bank_card.png'></image></view>
+        <view class='opt_bottom'>
+          <view class='ob_text1'>充值</view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='box' wx:if='{{hasUserInfo}}'>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      <view class='box_left'>
+        <view class='bl_title'>易用豆</view>
+      </view>
+      <view class='box_right'>
+        <view class='bl_con bl_con_dou'>
+          <view class='blc_icon'><image src='../../images/dou.png'></image></view>
+          <text>{{userInfo.member.integral}}</text>
+        </view>
+        <view class='br_icon'><image src='../../images/youjiantou.png'></image></view>
+      </view>
+    </view>
+    <view class='box' wx:if='{{hasUserInfo && userInfo.member.phone != ""}}'>
+      <view class='box_left'>
+        <view class='bl_title'>会员号</view>
+      </view>
+      <view class='box_right'>
+        <view class='br_text'>{{userInfo.member_no}}</view>
+      </view>
+    </view>
+    <view class='box' bindtap='toActivation' wx:if='{{userInfo.member.phone != undefined && userInfo.member.phone != "" && userInfo.member.phone != null}}'>
+      <view class='box_left'>
+        <view class='bl_title'>手机号</view>
+      </view>
+      <view class='box_right'>
+        <view class='br_text'>{{userInfo.member.phone}}</view>
+        <view class='br_icon'><image src='../../images/youjiantou.png'></image></view>
+      </view>
+<<<<<<< HEAD
+=======
+    </view> -->
+    <view class='box'>
+      <view class='box_left' wx:if='{{userInfo.member.no != undefined}}'>
+        <view class='bl_title'>会员卡号</view>
+      </view>
+      <view class='box_right'>{{userInfo.member.no}}</view>
+    </view>
+    <view class='box'>
+      <view class='box_left' wx:if='{{userInfo.member.phone != undefined}}'>
+        <view class='bl_title'>手机号</view>
+      </view>
+      <view class='box_right'>{{userInfo.member.phone}}</view>
+    </view>
+    <view class='box' bindtap='toCollection'>
+      <view class='box_left'>
+        <view class='bl_title'>我的收藏</view>
+      </view>
+      <view class='box_right'>
+        <view class='br_icon'><image src='../../images/youjiantou.png'></image></view>
+      </view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+    </view>
+      <view class='box' bindtap='toContactDiscount'>
+      <view class='box_left'>
+        <view class='bl_title'>代金券</view>
+      </view>
+      <view class='box_right'>
+        <view class='br_icon'><image src='../../images/youjiantou.png'></image></view>
+      </view>
+    </view>
+    <view class='box' bindtap='toRules'>
+      <view class='box_left'>
+        <view class='bl_title'>分时规则</view>
+      </view>
+      <view class='box_right'>
+        <view class='br_icon'><image src='../../images/youjiantou.png'></image></view>
+      </view>
+    </view>
+    <view class='box' bindtap='toContactUs'>
+      <view class='box_left'>
+        <view class='bl_title'>在线客服</view>
+      </view>
+      <view class='box_right'>
+        <view class='br_icon'><image src='../../images/youjiantou.png'></image></view>
+      </view>
+    </view>
+    <view class='text-tel' wx:if='{{last_hotelName == undefined || last_hotelName == null || last_hotelName == ""}}'>住店分时，时间不清零！</view>
+    <view class='text-tel' wx:else>{{last_hotelName}}</view>
+  </view>
+</view>

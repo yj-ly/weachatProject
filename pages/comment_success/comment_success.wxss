@@ -1,0 +1,38 @@
+page{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.main{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 280rpx;
+  height: 490rpx;
+  margin-top: 255rpx;
+  margin-left: 235rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.con_top{
+  width: 280rpx;
+  height: 248rpx;
+  display: flex;
+  flex-direction: column;
+}
+.con_top image{
+  width: 100%;
+  height: 100%;
+}
+.con_bottom{
+  width: 100%;
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #1e78af;
+  border: 1rpx solid #1e78af;
+  border-radius: 15rpx;
+}

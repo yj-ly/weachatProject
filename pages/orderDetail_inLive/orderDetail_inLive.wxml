@@ -1,0 +1,107 @@
+<view class='main'>
+  <view class='header'>
+    <view class='h_img'><image src='../../images/payBc.png'></image></view>
+    <view class='h_title'>入住中</view>
+    <view class='h_price'>
+      <view class='hp_icon'>￥</view>
+      <view class='hp_money'>{{hotel.money}}</view>
+      <view class='hp_Y'>元</view>
+    </view>
+    <view class='h_tips'>亲！有什么需要随时呼叫我哟！</view>
+  </view>
+  <view class='hotel'>
+    <view class='con'>
+      <view class='hc_l'>
+        <text class='hcl_t'>{{hotel.name}}</text>
+<<<<<<< HEAD
+        <text class='hcl_b'>{{hotel.addr}}</text>
+=======
+        <text class='hcl_b'>重庆市南岸区万达写字楼2栋17楼</text>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+    </view>
+    <view class='con con_list'>
+      <view class='con_l'>
+        <view class='roomName'>{{hotel.room.roomName}}<text class='rn_num'>({{hotel.room.num}}间)</text></view>
+        <view class='con_date'>
+          <view class='cd_start'>入住：{{hotel.room.starTime}}({{hotel.room.star_week}})</view>
+          <view class='cd_end'>离店：{{hotel.room.endTime}}({{hotel.room.end_week}})</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='hotel people'>
+    <view class='peoTitle'>预订人信息</view>
+    <view class='peo_con'>
+      <view class='pc_l'>预订人：</view>
+      <view class='pc_r'>{{people.name}}</view>
+    </view>
+    <view class='peo_con'>
+      <view class='pc_l'>联系电话：</view>
+      <view class='pc_r'>{{people.tel}}</view>
+    </view>
+    <view class='peo_con'>
+      <view class='pc_l'>预计到店：</view>
+      <view class="pc_r">{{people.arrvieTime}}</view>
+    </view>
+  </view>
+
+  <view class='hotel orderInfo'>
+    <view class='oiTitle'>订单详情</view>
+    <view class='oi_con'>
+      <view class='oic_l'>订单号：</view>
+      <view class="oic_r">{{orderInfo.orderNo}}</view>
+    </view>
+    <view class='oi_con'>
+      <view class='oic_l'>下单时间：</view>
+      <view class="oic_r">{{orderInfo.orderDate}}</view>
+    </view>
+  </view>
+
+  <view class='hotel refund' wx:if='{{refundData != null && refundData != ""}}'>
+    <view class='rfTitle'>支付信息</view>
+    <!-- 支付状态： 0成功，1失败，2支付中，3已取消，9待支付 -->
+    <view class='refund_content' wx:for-item="item" wx:for="{{refundData}}" wx:key="unique">
+      <!-- 支付 -->
+      <view wx:if='{{item.parent_id == 0}}'>
+        <view class='rf_con'>
+          <view class='rfc_l'>支付金额：</view>
+          <view class="rfc_r">￥{{item.total_amount}}元</view>
+        </view>
+        <view class='rf_con'>
+            <view class='rfc_l'>支付时间：</view>
+            <view class="rfc_r" wx:if='{{item.status == 0 && item.pay_time != null}}'>{{item.pay_time}}</view>
+            <view class="rfc_r rfc_status" wx:if='{{item.status == 1}}'>支付失败</view>
+            <view class="rfc_r rfc_status" wx:if='{{item.status == 3}}'>支付已取消</view>
+            <view class="rfc_r rfc_status" wx:if='{{item.status == 9}}'>待支付</view>
+          </view>
+        </view>
+      <!-- 退款 -->
+      <view wx:else>
+        <view class='rf_con'>
+          <view class='rfc_l'>退款金额：</view>
+          <view class="rfc_r">￥{{item.total_amount}}元</view>
+        </view>
+        <view class='rf_con'>
+          <view class='rfc_l'>退款时间：</view>
+          <view class="rfc_r" wx:if='{{item.status == 0 && item.pay_time != null}}'>{{item.pay_time}}</view>
+          <view class="rfc_r rfc_status" wx:if='{{item.status == 1}}'>退款失败</view>
+          <view class="rfc_r rfc_status" wx:if='{{item.status == 3}}'>退款已取消</view>
+          <view class="rfc_r rfc_status" wx:if='{{item.status == 9}}'>退款中</view>
+        </view>
+      </view>
+      <view class='rf_con'>
+        <view class='rfc_l'>支付方式：</view>
+        <view class="rfc_r rfc_pt" wx:if='{{item.pay_type == 0}}'>
+          <view class='rfcr_img'><image src='../../images/weChat.png'></image></view>
+          <view class='rfcr_text'>微信支付</view>
+        </view>
+        <view class="rfc_r rfc_pt" wx:if='{{item.pay_type == 1}}'>
+          <view class='rfcr_img'><image src='../../images/dou.png'></image></view>
+          <view class='rfcr_text'>易用豆支付</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

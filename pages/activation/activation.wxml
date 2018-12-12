@@ -1,0 +1,23 @@
+<view class='activation'>
+  <view class='bc'><image src='../../images/activation_bc.png'></image></view>
+  <view class='con'>
+    <view class='con_img'>
+      <view class='icon icon1'><image src='../../images/activation_con1.png'></image></view>
+    </view>
+    <input id='name' value='{{userName}}' bindblur='nameBlur' placeholder='姓名'></input>
+  </view>
+  <view class='con'>
+    <button class='gpn' open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'></button>
+    <view class='con_img'>
+      <view class='icon icon2'><image src='../../images/activation_con2.png'></image></view>
+    </view>
+    <input value='{{userTel}}' id='tel' placeholder='点击获取联系电话'></input>
+  </view>
+  <view class='con'>
+    <view class='con_img con_img3'>
+      <view class='icon icon3'><image src='../../images/activation_con3.png'></image></view>
+    </view>
+    <input id='card' value='{{userCard}}' bindblur='cardBlur' placeholder='身份证号码(方便入住)'></input>
+  </view>
+  <view class='button' bindtap='getActivation'>保存</view>
+</view>

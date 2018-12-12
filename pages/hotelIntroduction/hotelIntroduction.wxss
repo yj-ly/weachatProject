@@ -1,0 +1,212 @@
+page{
+  width: 100%;
+  background: #ebebeb;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  width: 702rpx;
+  margin: 48rpx auto;
+  background: #fff;
+  padding: 69rpx 37rpx 0 37rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.t_name{
+  font-size: 38rpx;
+  color: #000000;
+  margin-bottom: 23rpx;
+}
+.tn_hr{
+  width: 50rpx;
+  height: 2rpx;
+  background: #3e86b3;
+  margin-bottom: 20rpx;
+}
+.hotel_tel{
+  width: 100%;
+  height: 188rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.ht_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.htl_one{
+  display: flex;
+  flex-direction: row;
+}
+.ho_icon{
+  width: 22rpx;
+  height: 22rpx;
+  display: flex;
+  flex-direction: row;
+  margin-right: 13rpx;
+  margin-bottom: 22rpx;
+}
+.ho_icon image{
+  width: 100%;
+  height: 100%;
+}
+.ho_text{
+  color: #616161;
+  font-size: 30rpx;
+  line-height: 22rpx;
+}
+.htl_two{
+  display: flex;
+  flex-direction: row;
+}
+.ht_icon{
+  width: 21rpx;
+  height: 23rpx;
+  display: flex;
+  flex-direction: row;
+  margin-right: 14rpx;
+}
+.ht_icon image{
+  width: 100%;
+  height: 100%;
+}
+.ht_text{
+  font-size: 28rpx;
+  color: #616161;
+  line-height: 23rpx;
+}
+.wx{
+  margin-right: 24rpx;
+}
+.ht_right{
+  display: flex;
+  flex-direction: row;
+}
+.hr_hr{
+  width: 2rpx;
+  height: 104rpx;
+  background: #f2f2f2;
+  margin: auto 0;
+}
+.hr_icon{
+  width: 38rpx;
+  height: 38rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 35rpx auto 68rpx;
+}
+.hr_icon image{
+  width: 100%;
+  height: 100%;
+}
+.hotel_tel_hr{
+  width: 608rpx;
+  height: 2rpx;
+  background: #f2f2f2;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.hotel_addr{
+  width: 100%;
+  height: 187rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ha_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ha_content{
+  display: flex;
+  flex-direction: row;
+}
+.hal_img{
+  width: 18rpx;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 15rpx;
+  padding-top: 6rpx;
+  box-sizing: border-box;
+}
+.hal_icon{
+  width: 18rpx;
+  height: 24rpx;
+  display: flex;
+  flex-direction: row;
+}
+.hal_icon image{
+  width: 100%;
+  height: 100%;
+}
+.hal_text{
+  max-width: 404rpx;
+  font-size: 28rpx;
+  color: #616161;
+  line-height: 36rpx;
+}
+.ha_right{
+  display: flex;
+  flex-direction: row;
+}
+.har_hr{
+  width: 2rpx;
+  height: 104rpx;
+  background: #f2f2f2;
+  margin: auto 0;
+}
+.har_icon{
+  width: 36rpx;
+  height: 37rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 37rpx auto 69rpx;
+}
+.har_icon image{
+  width: 100%;
+  height: 100%;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 100%;
+  min-height: 704rpx;
+  padding: 46rpx 24rpx;
+  box-sizing: border-box;
+}
+.bot_title{
+  font-size: 30rpx;
+  color: #252525;
+  text-align: center;
+}
+.bot_hr{
+  width: 30rpx;
+  height: 2rpx;
+  margin: 16rpx auto 48rpx auto;
+  background: #b6b6b6;
+}
+.bot_text{
+  font-size: 24rpx;
+  color: #757575;
+  line-height: 47rpx;
+}
+.space{
+  display: inline-block;
+  width: 48rpx;
+  height: 24rpx;
+}

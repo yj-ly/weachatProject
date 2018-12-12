@@ -1,0 +1,96 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.activation{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 112rpx;
+  padding-left: 53rpx;
+  box-sizing: border-box;
+}
+.bc{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index: -1;
+}
+.bc image{
+  width: 100%;
+  height: 100%;
+}
+.con{
+  width: 645rpx;
+  height: 86rpx;
+  background: #fff;
+  border: 1rpx solid #bfbfbf;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 44rpx;
+  position: relative;
+}
+.gpn{
+  width: 645rpx;
+  height: 86rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  opacity: 0;
+}
+.con_img{
+  width: 93rpx;
+  height: 86rpx;
+  padding-left: 24rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.con_img3{
+  padding-top: 27rpx;
+}
+.icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.icon1{
+  width: 43rpx;
+  height: 47rpx;
+}
+.icon2{
+  width: 47rpx;
+  height: 47rpx;
+}
+.icon3{
+  width: 48rpx;
+  height: 36rpx;
+}
+.icon image{
+  width: 100%;
+  height: 100%;
+}
+#name,#tel,#card{
+  width: 552rpx;
+  height: 88rpx;
+  font-size: 30rpx;
+  color: #919191;
+}
+.button{
+  width: 645rpx;
+  height: 116rpx;
+  line-height: 116rpx;
+  background: #1177b4;
+  color: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 48rpx;
+  margin-top: 76rpx;
+}

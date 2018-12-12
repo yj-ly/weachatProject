@@ -1,0 +1,942 @@
+.main{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #ececec;
+  overflow: hidden;
+}
+<<<<<<< HEAD
+=======
+.hotel_imgs{
+  position: relative;
+}
+.hi_hotelName{
+  width: 100%;
+  height: 66rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  box-shadow:0 -35rpx 35rpx #3b3b3b inset;
+}
+.hi_star{
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  top: 15rpx;
+  right: 24rpx;
+}
+.hi_star image{
+  width: 100%;
+  height: 100%;
+}
+.hi_page{
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 66rpx;
+}
+.hotl_name{
+  line-height: 66rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+.topImg{
+  width: 100%;
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+}
+.topImg image{
+  width: 100%;
+  height: 100%;
+}
+swiper{
+  width: 100%;
+  height: 350rpx;
+}
+swiper swiper-item{
+  width: 100%;
+  height: inherit;
+}
+swiper swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+.hotel{
+  padding: 25rpx;
+  background: #fff;
+  padding-bottom: 0;
+}
+.hot_con{
+  width: 100%;
+  height: 66rpx;
+  display: flex;
+  flex-direction: row;
+}
+.h_hotel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.h_addr{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hc_left{
+  display: flex;
+  flex-direction: row;
+}
+.hc_right{
+  color: #3e86b3;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: row;
+}
+.hotel_icon1{
+  width: 25rpx;
+  height: 27rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  margin-right: 12rpx;
+}
+.hotel_icon1 image{
+  width: 100%;
+  height: 100%;
+}
+.hotel_icon2{
+  width: 22rpx;
+  height: 22rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  margin-right: 13rpx;
+}
+.hotel_icon2 image{
+  width: 100%;
+  height: 100%;
+}
+.hotel_icon3{
+  width: 18rpx;
+  height: 24rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  margin-right: 15rpx;
+}
+.ha_con{
+  max-width: 80%; 
+  display: flex;
+  flex-direction: row;
+}
+.hotel_icon3 image{
+  width: 100%;
+  height: 100%;
+}
+<<<<<<< HEAD
+.hotl_name{
+  line-height: 66rpx;
+  font-size: 36rpx;
+  color: #2b2b2b;
+}
+.hotl_tel{
+  line-height: 66rpx;
+  font-size: 28rpx;
+  color: #616161;
+=======
+.hotl_tel{
+  line-height: 66rpx;
+  font-size: 28rpx;
+  color: #616161;
+}
+.h_score{
+  justify-content: space-between;
+}
+.hcs_left{
+  display: flex;
+  flex-direction: row;
+}
+.hotl_score{
+  line-height: 66rpx;
+  font-size: 36rpx;
+  color: #18cfc9;
+}
+.hc_right{
+  line-height: 66rpx;
+  color: #616161;
+  font-size: 24rpx;
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+}
+.hotl_addr{
+  font-size: 28rpx;
+  color: #616161;
+}
+.map{
+  color: #3e86b3;
+  font-size: 24rpx;
+}
+.hcr_icon{
+  width: 7rpx;
+  height: 13rpx;
+  margin: auto 0;
+  margin-left: 16rpx;
+  display: flex;
+  flex-direction: column;
+}
+.hcr_icon image{
+  width: 100%;
+  height: 100%;
+}
+
+.date{
+  width: 100%;
+  min-height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 27rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 22rpx;
+  color: #616161;
+  border-bottom: 1px solid #ededed;
+}
+.date .date_con{
+  display: flex;
+  flex-direction: row;
+  margin-right: 15rpx;
+}
+.date .date_con .dateHr{
+  width: 1px;
+  height: 23rpx;
+  margin: auto 0;
+  background: #b2b2b2;
+  margin-left: 15rpx;
+}
+
+.time{
+  height: 104rpx;
+  line-height: 104rpx;
+  padding: 0 34rpx;
+  margin-bottom: 8rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.tc_icon{
+  width: 28rpx;
+  height: 28rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 13rpx auto 0;
+}
+.tc_icon image{
+  width: 100%;
+  height: 100%;
+}
+.time .time_choose{
+  width: 100%;
+  height: 104rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.time_choose .pickTime{
+  font-size: 28rpx;
+  color: #616161;
+  line-height: 104rpx;
+}
+ .time_choose .tc_star,.time_choose .tc_end{
+  display: flex;
+  flex-direction: row
+}
+.time .iDays{
+  width: 122rpx;
+  height: 50rpx;
+  background: #f7fcff;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border: 1rpx solid #3e86b3;
+  color: #3e86b3;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.room{
+  background: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 25rpx;
+<<<<<<< HEAD
+  padding-bottom: 0;
+  margin-bottom: 1rpx;
+}
+=======
+  margin-bottom: 1rpx;
+}
+.showMore{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #fff;
+  margin-bottom:8rpx;
+}
+.sm_text{
+  font-size: 26rpx;
+  color: #ff6131;
+}
+.sm_icon{
+  width: 18rpx;
+  height: 10rpx;
+  margin: auto 0 auto 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.sm_icon image{
+  width: 100%;
+  height: 100%;
+}
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+.room_l{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.room_l .rl_text{
+  display: flex;
+  flex-direction: column;
+}
+.room_l .rl_text .r_name{
+  font-size: 30rpx;
+  color: #5a5a5a;
+<<<<<<< HEAD
+  margin-bottom: 10rpx;
+=======
+  margin-bottom: 27rpx;
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+}
+.room_l .rl_text .r_content{
+  width: 400rpx;
+  font-size: 22rpx;
+  color: #7b7b7b;
+  margin-bottom: 26rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.room_l .rl_text .r_price{
+  display: flex;
+  flex-direction: row;
+}
+.room_l .rl_text .r_price .icon{
+  color: #f11c1c;
+  font-size: 26rpx;
+  line-height: 67rpx;
+}
+.room_l .rl_text .r_price .money{
+  color: #f11c1c;
+  font-size: 36rpx;
+  line-height: 63rpx;
+}
+.room_l .rl_text .r_price .money2{
+  color: #7b7b7b;
+  font-size: 22.87rpx;
+  line-height: 73rpx;
+  text-decoration:line-through;
+}
+.room_l .rl_text .r_price .con{
+  color: #fff;
+  width: 22rpx;
+  height: 39rpx;
+  font-size: 16rpx;
+  text-align: center;
+  background: #2ac49e;
+  padding: 5rpx 2rpx;
+  margin-right: 8rpx;
+}
+.room_r{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 24rpx;
+}
+.room_r .rr_bottom{
+  color: #7b7b7b;
+  font-size: 24rpx;
+  text-align: right;
+}
+.reserve{
+  width: 120rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  background: #ff6131;
+  margin-bottom: 17rpx;
+  border-radius: 0;
+}
+.reserve::after{
+  border-radius: 0;
+}
+.reserve_no{
+  background: #a7a7a7;
+}
+
+<<<<<<< HEAD
+=======
+/*查看过的人*/
+.seeList{
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8rpx;
+}
+.sl_imgs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.seeList_con{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 11rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.seeList_con image{
+  width: 100%;
+  height: 100%;
+}
+.sl_text{
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+.st_font{
+  color: #616161;
+  font-size: 21rpx;
+  text-align: center;
+}
+
+/* 评论列表 */
+.commentList{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8rpx;
+}
+.com_con{
+  width: 100%;
+  background: #fff;
+  padding: 26rpx 24rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8rpx;
+}
+.cc_left{
+  width: 97rpx;
+  height: 100%;
+}
+.ccl_tx{
+  width: 97rpx;
+  height: 97rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ccl_tx image{
+  width: 100%;
+  height: 100%;
+}
+.cc_right{
+  width: 604rpx;
+  display: flex;
+  flex-direction: column;
+}
+.ccr_top{
+  width: 100%;
+  height: 97rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ccrt_left{
+  display: flex;
+  flex-direction: row;
+  line-height: 97rpx;
+  padding-left: 14rpx;
+}
+.name{
+  color: #323232;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+.zan{
+  display: flex;
+  flex-direction: row;
+}
+.zan_icon{
+  width: 26rpx;
+  height: 26rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 35.5rpx;
+  margin-right: 5rpx;
+}
+.zan_icon image{
+  width: 100%;
+  height: 100%;
+}
+.zan_num{
+  font-size: 18rpx;
+  color: #1e78af;
+  line-height: 103rpx;
+}
+.ccrt_right{
+  color: #7b7b7b;
+  font-size: 24rpx;
+  line-height: 97rpx;
+}
+.ccr_bottom{
+  display: flex;
+  flex-direction: column;
+  padding: 12rpx 9rpx;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+.ccrb_text{
+  font-size: 24rpx;
+  color: #7b7b7b;
+}
+.ccrb_imgs{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.content_img{
+  width: 179rpx;
+  height: 179rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.content_img image{
+  width: 100%;
+  height: 100%;
+}
+.content_img:nth-child(3),.content_img:nth-child(6),.content_img:nth-child(9){
+  margin-right: 0
+}
+.content_img:nth-child(7),.content_img:nth-child(8),.content_img:nth-child(9){
+  margin-bottom: 0
+}
+.official{
+  margin-top: 40rpx;
+  width: 100%;
+  border-radius: 20rpx;
+  background: #f0f0f0;
+  font-size: 24rpx;
+  color: #7b7b7b;
+  padding: 20rpx 26rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.official_title{
+  color: #1e78af;
+}
+.jian{
+  position: absolute;
+  width:0; 
+  height:0; 
+  border-left:18rpx solid transparent;
+  border-right:18rpx solid transparent;
+  border-bottom:20rpx solid #f0f0f0;
+  left: 35rpx;
+  top: -18rpx;
+}
+.moreComment{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: #fff;
+  border-top: 1rpx solid #ececec;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color: #ff6131;
+  margin-top: -8rpx;
+}
+.mc_icon{
+  width: 10rpx;
+  height: 18rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 auto 16rpx;
+}
+.mc_icon image{
+  width: 100%;
+  height: 100%;
+}
+
+/*附近的酒店*/
+.nearbyHotel{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 100%;
+}
+.nh_title{
+  height: 95rpx;
+  line-height: 95rpx;
+  width: 100%;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: #616161;
+}
+.nh_hotles{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.nhh_con{
+  display: flex;
+  flex-direction: column;
+  width: 338rpx;
+  min-height: 360rpx;
+  margin-right: 24rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 5rpx 5rpx 5rpx rgba(142, 142, 141, .13);
+}
+.nhh_con:nth-child(even){
+  margin-right: 0
+}
+.nhhc_img{
+  width: 100%;
+  height: 184rpx;
+  display: flex;
+  flex-direction: column;
+}
+.nhhc_img image{
+  width: 100%;
+  height: 100%;
+}
+.nhhc_con{
+  display: flex;
+  flex-direction: column;
+  padding: 17rpx 9rpx;
+  box-sizing: border-box;
+}
+.ncc_name{
+  width: 90%;
+  height: 26rpx;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  color: #414141;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.ncc_score{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+  color: #18cfc9;
+}
+.ncc_addr{
+  width: 100%;
+  height: 18rpx;
+  line-height: 18rpx;
+  font-size: 18rpx;
+  margin-top: 16rpx;
+  color: #676767;
+}
+.ncc_price{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-top: 20rpx;
+  color: #f95420;
+}
+.np_one{
+  font-size: 20rpx;
+  line-height: 39rpx;
+}
+.np_two{
+  font-size: 20rpx;
+  line-height: 36rpx;
+  margin-left: 3rpx;
+  color: #7a7a7a;
+}
+
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+/*房间详情弹出层*/
+.roomDetail{
+  position: fixed;
+  bottom:0;
+  left: 0;
+  z-index: 11;
+  background: #fff;
+  width: 100%;
+  height: 1010rpx;
+  overflow: auto;
+  padding-top: 75rpx;
+}
+.roomDetail .title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 1010rpx;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 20;
+}
+.roomDetail .title .title_text{
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  color: #076299;
+  font-size: 36rpx;
+}
+.roomDetail .title .close{
+  width: 28rpx;
+  height: 28rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 25rpx auto 0;
+  z-index: 20;
+}
+.roomDetail .title .close image{
+  width: 100%;
+  height: 100%;
+}
+.roomDetail swiper{
+  width: 100%;
+  height: 350rpx;
+}
+.roomDetail .specifications{
+  width: 100%;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.roomDetail .specifications .sft{
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sft .sftc_l{
+  width: 50%;
+  margin-bottom: 24rpx;
+  display: flex;
+  flex-direction: row;
+}
+.sft .sftc_r{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.sft .sftc_l .sftcl_title{
+  width: 2.6875rem;
+  height: 100%;
+  color: #aaaaaa;
+  font-size: 0.75rem;
+}
+.sft .sftc_l .sftcl_con{
+  width: auto;
+  height: 100%;
+  color: #5a5a5a;
+  font-size: 0.75rem;
+}
+.sft .sftc_r .sftcr_title{
+  width: 2.6875rem;
+  height: 100%;
+  color: #aaaaaa;
+  font-size: 0.75rem;
+}
+.sft .sftc_r .sftcr_con{
+  width: auto;
+  height: 100%;
+  color: #5a5a5a;
+  font-size: 0.75rem;
+}
+.roomDetail .specifications .refund{
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: .75rem 0;
+}
+.roomDetail .specifications .refund .reFundTitle{
+  color: #5a5a5a;
+  font-size: 0.75rem;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+.roomDetail .specifications .refund .refundCon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+.refundCon .rf_icon{
+  width: 21rpx;
+  height: 21rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 9rpx;
+}
+.rf_icon image{
+  width: 100%;
+  height: 100%;
+}
+.refundCon .rf_con{
+  width: 94%;
+}
+.rf_con .rf_text{
+  color: #5a5a5a;
+  font-size: 0.75rem;
+}
+.rf_text .red{
+  color: #f11c1c;
+  margin-right: 0.9375rem;
+}
+.roomDetail .specifications .use{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: .75rem 0;
+}
+.use .useTitle{
+  color: #5a5a5a;
+  font-size: 0.75rem;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+.use .useCon{
+  display: flex;
+  flex-direction: column;
+}
+.useCon .use_for{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+.useCon .use_for:last-child{
+  margin-bottom: 0;
+}
+.useCon .use_for .uc_icon{
+  width: .25rem;
+  height: .25rem;
+  border-radius: 50%;
+  background: #2c2c2c;
+  margin-top: .4rem;
+}
+.useCon .use_for .uc_con{
+  width: 96%;
+  font-size: 0.75rem;
+  color: #5a5a5a;
+}
+.roomDetailFooter{
+  width: 100%;
+  height: 98rpx;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.roomDetailFooter .rf_l{
+  width: 50%;
+  height: 98rpx;
+  background: #fff;
+  color: #f11c1c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top: 1rpx solid #ededed;
+}
+.rf_l_l{
+  font-size: 30rpx;
+  line-height: 105rpx;
+}
+.rf_l_r{
+  font-size: 40rpx;
+  line-height: 98rpx;
+}
+.roomDetailFooter .rf_r{
+  width: 50%;
+  height: 98rpx;
+  background: #076299;
+  line-height: 98rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+}
+.roomDetailFooter .rf_no{
+  background:#a7a7a7;
+}
+.roomDetailFooter .rf_r button{
+  width: 100%;
+  height: 98rpx;
+  background: #076299;
+  line-height: 98rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 0;
+}
+.roomDetailFooter .rf_r button::after{
+  border-radius: 0;
+}
+
+/*遮挡层*/
+.bc{
+  width: 100%;
+  height: calc(100% - 98rpx);
+  background: #aaaaaa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: .8;
+  z-index: 9;
+}

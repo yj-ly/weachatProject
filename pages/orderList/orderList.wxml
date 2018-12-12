@@ -1,0 +1,315 @@
+<!-- 选项 -->
+<view class='options'>
+  <view data-optIndex='{{index}}' class='option_con' bindtap='optionClick' wx:for="{{options}}" wx:key="unique">{{item}}</view>
+  <view animation="{{animationData}}" class='option_hr'></view>
+</view>
+
+<!-- 全部 -->
+<view class='scroll_con' wx:if='{{current == 0}}'>
+<<<<<<< HEAD
+  <view wx:if='{{orderList.length > 0}}' class='houses' data-type='{{h_item.orderType}}'
+    data-orderId='{{h_item.orderId}}' data-hotelId='{{h_item.hotelId}}'
+    data-order_status='{{h_item.order_status}}' data-pay_status='{{h_item.pay_status}}' bindtap='clickOrder'
+    wx:for='{{orderList}}' wx:key="und" wx:for-index="ind" wx:for-item='h_item'>
+    <view class='h_content'>
+=======
+  <view wx:if='{{orderList.length > 0}}' class='houses'
+    wx:for='{{orderList}}' wx:key="und" wx:for-index="ind" wx:for-item='h_item'>
+    <view class='h_content'>
+      <view class='pl_bc' data-orderNo='{{h_item.orderNo}}'
+       data-hotelId='{{h_item.hotelId}}' bindtap='toEvaluate' wx:if='{{h_item.order_status == 0 && h_item.is_commented == 0}}'></view>
+      <view class='con_bc' data-orderId='{{h_item.orderId}}' data-type='{{h_item.orderType}}'
+        data-orderId='{{h_item.orderId}}' data-hotelId='{{h_item.hotelId}}'
+        data-order_status='{{h_item.order_status}}' data-pay_status='{{h_item.pay_status}}' bindtap='clickOrder'></view>
+      <view class='con_bc_rt' data-orderId='{{h_item.orderId}}' data-type='{{h_item.orderType}}'
+        data-orderId='{{h_item.orderId}}' data-hotelId='{{h_item.hotelId}}'
+        data-order_status='{{h_item.order_status}}' data-pay_status='{{h_item.pay_status}}' bindtap='clickOrder'></view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      <view class='hc_con'>
+        <view class='hcc_left'>
+          <view class='hl_img'><image src='../../images/time_left.png'></image></view>
+          <view class='hc_time'>
+            <view class='hc_OrderTime_l'></view>
+            <view class='hc_OrderTime'>{{h_item.createTime}}</view>
+            <view class='hc_OrderTime_r'></view>
+          </view>
+        </view>
+        <view class='hc_price'>
+          <view class='hcp_s'>￥</view>
+          <view class='hcp_b'>{{h_item.price}}</view>
+          <view class='hcp_y'>元</view>
+        </view>
+      </view>
+<<<<<<< HEAD
+      <view class='hc_con' style='margin-bottom:15rpx'>
+=======
+      <view class='hc_con'>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+        <view class='hc_name'>{{h_item.name}}</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 0 && h_item.pay_status == 0}}'>待商户确认</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 0 && h_item.pay_status != 0}}'>待付款</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 1}}'>待入住</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 2}}'>入住中</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 0}}'>已完成</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 2}}'>已取消</view>
+      </view>
+      <view class='hc_con'>
+        <view class='hc_orderNo'>订单号：{{h_item.orderNo}}</view> 
+      </view>
+      <view class='hc_con'>
+        <view class='hc_time'>入离时间：{{h_item.startTime}} - {{h_item.endTime}}({{h_item.num}}间/{{h_item.night}}晚)</view>
+<<<<<<< HEAD
+        <view class='hc_right_icon'><image src='../../images/youjiantou.png'></image></view>
+=======
+        <view class='hc_right' wx:if='{{h_item.order_status == 0 && h_item.is_commented == 0}}'>
+          <view class='hcr_text'>评论</view>
+          <view class='hc_right_icon'><image src='../../images/youjiantou.png'></image></view>
+        </view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+    </view>
+  </view>
+  <view class='houses_null' wx:if='{{orderList.length == 0}}'>
+    <view class='hn_con'>
+      <view class='nullOrderIcon'><image src='../../images/nullOrderList.png'></image></view>
+      <view class='nullOrderText'>暂无订单</view>
+    </view>
+  </view>
+  <!-- 上拉加载 -->
+  <view class='footer' wx:if="{{showLoading && orderList.length > 0 && current == 0}}"> 
+    <view class='footer_con'>
+      <view class='footer_con_icon'><image src='../../images/bottom_loading.png'></image></view>
+      <view class='footer_con_text'>拼命加载中...</view>
+    </view>
+  </view> 
+  <view class='footer footer_null' wx:if='{{showNull && orderList.length > 0 && current == 0 && page >= 1}}'> 
+    <view class='footer_con'>
+      <view class='footer_con_text'>哦噢到底了</view>
+    </view>
+  </view>  
+</view> 
+<!-- 待确认 -->
+<view class='scroll_con' wx:if='{{current == 1}}'>
+  <view wx:if='{{orderList_1.length > 0}}' class='houses' data-type='{{h_item.orderType}}'
+    data-orderId='{{h_item.orderId}}' data-hotelId='{{h_item.hotelId}}'
+    data-order_status='{{h_item.order_status}}' data-pay_status='{{h_item.pay_status}}' bindtap='clickOrder'
+    wx:for='{{orderList_1}}' wx:key="und" wx:for-index="ind" wx:for-item='h_item'>
+    <view class='h_content'>
+<<<<<<< HEAD
+=======
+      <view class='pl_bc' data-orderNo='{{h_item.orderNo}}' data-hotelId='{{h_item.hotelId}}'
+       bindtap='toEvaluate' wx:if='{{h_item.order_status == 0 && h_item.is_commented == 0}}'></view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      <view class='hc_con'>
+        <view class='hcc_left'>
+          <view class='hl_img'><image src='../../images/time_left.png'></image></view>
+          <view class='hc_time'>
+            <view class='hc_OrderTime_l'></view>
+            <view class='hc_OrderTime'>{{h_item.createTime}}</view>
+            <view class='hc_OrderTime_r'></view>
+          </view>
+        </view>
+        <view class='hc_price'>
+          <view class='hcp_s'>￥</view>
+          <view class='hcp_b'>{{h_item.price}}</view>
+          <view class='hcp_y'>元</view>
+        </view>
+      </view>
+<<<<<<< HEAD
+      <view class='hc_con' style='margin-bottom:15rpx'>
+=======
+      <view class='hc_con'>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+        <view class='hc_name'>{{h_item.name}}</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 0 && h_item.pay_status == 0}}'>待商户确认</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 0 && h_item.pay_status != 0}}'>待付款</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 1}}'>待入住</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 2}}'>入住中</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 0}}'>已完成</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 2}}'>已取消</view>
+      </view>
+      <view class='hc_con'>
+        <view class='hc_orderNo'>订单号：{{h_item.orderNo}}</view> 
+      </view>
+      <view class='hc_con'>
+        <view class='hc_time'>入离时间：{{h_item.startTime}} - {{h_item.endTime}}({{h_item.num}}间/{{h_item.night}}晚)</view>
+<<<<<<< HEAD
+        <view class='hc_right_icon'><image src='../../images/youjiantou.png'></image></view>
+=======
+        <view class='hc_right' wx:if='{{h_item.order_status == 0 && h_item.is_commented == 0}}'>
+          <view class='hcr_text'>评论</view>
+          <view class='hc_right_icon'><image src='../../images/youjiantou.png'></image></view>
+        </view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+    </view>
+  </view>
+  <view class='houses_null' wx:if='{{orderList_1.length == 0}}'>
+    <view class='hn_con'>
+      <view class='nullOrderIcon'><image src='../../images/nullOrderList.png'></image></view>
+      <view class='nullOrderText'>暂无待确认订单</view>
+    </view>
+  </view>
+  <!-- 上拉加载 -->
+  <view class='footer' wx:if="{{showLoading && orderList_1.length > 0 && current == 1}}"> 
+    <view class='footer_con'>
+      <view class='footer_con_icon'><image src='../../images/bottom_loading.png'></image></view>
+      <view class='footer_con_text'>拼命加载中...</view>
+    </view>
+  </view> 
+  <view class='footer footer_null' wx:if='{{showNull && orderList_1.length > 0 && current == 1 && page >= 1}}'> 
+    <view class='footer_con'>
+      <view class='footer_con_text'>哦噢到底了</view>
+    </view>
+  </view>  
+</view>
+<!-- 已确认 -->
+<view class='scroll_con' wx:if='{{current == 2}}'>
+  <view wx:if='{{orderList_2.length > 0}}' class='houses' data-type='{{h_item.orderType}}'
+    data-orderId='{{h_item.orderId}}' data-hotelId='{{h_item.hotelId}}'
+    data-order_status='{{h_item.order_status}}' data-pay_status='{{h_item.pay_status}}' bindtap='clickOrder'
+    wx:for='{{orderList_2}}' wx:key="und" wx:for-index="ind" wx:for-item='h_item'>
+    <view class='h_content'>
+<<<<<<< HEAD
+=======
+      <view class='pl_bc' data-orderNo='{{h_item.orderNo}}' data-hotelId='{{h_item.hotelId}}'
+       bindtap='toEvaluate' wx:if='{{h_item.order_status == 0 && h_item.is_commented == 0}}'></view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      <view class='hc_con'>
+        <view class='hcc_left'>
+          <view class='hl_img'><image src='../../images/time_left.png'></image></view>
+          <view class='hc_time'>
+            <view class='hc_OrderTime_l'></view>
+            <view class='hc_OrderTime'>{{h_item.createTime}}</view>
+            <view class='hc_OrderTime_r'></view>
+          </view>
+        </view>
+        <view class='hc_price'>
+          <view class='hcp_s'>￥</view>
+          <view class='hcp_b'>{{h_item.price}}</view>
+          <view class='hcp_y'>元</view>
+        </view>
+      </view>
+<<<<<<< HEAD
+      <view class='hc_con' style='margin-bottom:15rpx'>
+=======
+      <view class='hc_con'>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+        <view class='hc_name'>{{h_item.name}}</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 0 && h_item.pay_status == 0}}'>待商户确认</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 0 && h_item.pay_status != 0}}'>待付款</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 1}}'>待入住</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 2}}'>入住中</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 0}}'>已完成</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 2}}'>已取消</view>
+      </view>
+      <view class='hc_con'>
+        <view class='hc_orderNo'>订单号：{{h_item.orderNo}}</view> 
+      </view>
+      <view class='hc_con'>
+        <view class='hc_time'>入离时间：{{h_item.startTime}} - {{h_item.endTime}}({{h_item.num}}间/{{h_item.night}}晚)</view>
+<<<<<<< HEAD
+        <view class='hc_right_icon'><image src='../../images/youjiantou.png'></image></view>
+=======
+        <view class='hc_right' wx:if='{{h_item.order_status == 0 && h_item.is_commented == 0}}'>
+          <view class='hcr_text'>评论</view>
+          <view class='hc_right_icon'><image src='../../images/youjiantou.png'></image></view>
+        </view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+    </view>
+  </view>
+  <view class='houses_null' wx:if='{{orderList_2.length == 0}}'>
+    <view class='hn_con'>
+      <view class='nullOrderIcon'><image src='../../images/nullOrderList.png'></image></view>
+      <view class='nullOrderText'>暂无已确认订单</view>
+    </view>
+  </view>
+  <!-- 上拉加载 -->
+  <view class='footer' wx:if="{{showLoading && orderList_2.length > 0 && current == 2}}"> 
+    <view class='footer_con'>
+      <view class='footer_con_icon'><image src='../../images/bottom_loading.png'></image></view>
+      <view class='footer_con_text'>拼命加载中...</view>
+    </view>
+  </view> 
+  <view class='footer footer_null' wx:if='{{showNull && orderList_2.length > 0 && current == 2 && page >= 1}}'> 
+    <view class='footer_con'>
+      <view class='footer_con_text'>哦噢到底了</view>
+    </view>
+  </view>  
+</view>
+<!-- 已取消 -->
+<view class='scroll_con' wx:if='{{current == 3}}'>
+  <view wx:if='{{orderList_3.length > 0}}' class='houses' data-type='{{h_item.orderType}}'
+    data-orderId='{{h_item.orderId}}' data-hotelId='{{h_item.hotelId}}'
+    data-order_status='{{h_item.order_status}}' data-pay_status='{{h_item.pay_status}}' bindtap='clickOrder'
+    wx:for='{{orderList_3}}' wx:key="und" wx:for-index="ind" wx:for-item='h_item'>
+    <view class='h_content'>
+<<<<<<< HEAD
+=======
+      <view class='pl_bc' data-orderNo='{{h_item.orderNo}}' data-hotelId='{{h_item.hotelId}}'
+       bindtap='toEvaluate' wx:if='{{h_item.order_status == 0 && h_item.is_commented == 0}}'></view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      <view class='hc_con'>
+        <view class='hcc_left'>
+          <view class='hl_img'><image src='../../images/time_left.png'></image></view>
+          <view class='hc_time'>
+            <view class='hc_OrderTime_l'></view>
+            <view class='hc_OrderTime'>{{h_item.createTime}}</view>
+            <view class='hc_OrderTime_r'></view>
+          </view>
+        </view>
+        <view class='hc_price'>
+          <view class='hcp_s'>￥</view>
+          <view class='hcp_b'>{{h_item.price}}</view>
+          <view class='hcp_y'>元</view>
+        </view>
+      </view>
+<<<<<<< HEAD
+      <view class='hc_con' style='margin-bottom:15rpx'>
+=======
+      <view class='hc_con'>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+        <view class='hc_name'>{{h_item.name}}</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 0 && h_item.pay_status == 0}}'>待商户确认</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 0 && h_item.pay_status != 0}}'>待付款</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 1}}'>待入住</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 2}}'>入住中</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 1 && h_item.order_status == 0}}'>已完成</view>
+        <view class='hc_orderType' wx:if='{{h_item.orderType == 2}}'>已取消</view>
+      </view>
+      <view class='hc_con'>
+        <view class='hc_orderNo'>订单号：{{h_item.orderNo}}</view> 
+      </view>
+      <view class='hc_con'>
+        <view class='hc_time'>入离时间：{{h_item.startTime}} - {{h_item.endTime}}({{h_item.num}}间/{{h_item.night}}晚)</view>
+<<<<<<< HEAD
+        <view class='hc_right_icon'><image src='../../images/youjiantou.png'></image></view>
+=======
+        <view class='hc_right' wx:if='{{h_item.order_status == 0 && h_item.is_commented == 0}}'>
+          <view class='hcr_text'>评论</view>
+          <view class='hc_right_icon'><image src='../../images/youjiantou.png'></image></view>
+        </view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+    </view>
+  </view>
+  <view class='houses_null' wx:if='{{orderList_3.length == 0}}'>
+    <view class='hn_con'>
+      <view class='nullOrderIcon'><image src='../../images/nullOrderList.png'></image></view>
+      <view class='nullOrderText'>暂无已取消订单</view>
+    </view>
+  </view>
+  <!-- 上拉加载 -->
+  <view class='footer' wx:if="{{showLoading && orderList_3.length > 0 && current == 3}}"> 
+    <view class='footer_con'>
+      <view class='footer_con_icon'><image src='../../images/bottom_loading.png'></image></view>
+      <view class='footer_con_text'>拼命加载中...</view>
+    </view>
+  </view> 
+  <view class='footer footer_null' wx:if='{{showNull && orderList_3.length > 0 && current == 3 && page >= 1}}'> 
+    <view class='footer_con'>
+      <view class='footer_con_text'>哦噢到底了</view>
+    </view>
+  </view>  
+</view>

@@ -1,0 +1,76 @@
+<view class='main'>
+  <view class='header'>
+    <view class='h_img'><image src='../../images/payBc.png'></image></view>
+    <view class='h_title'>已完成</view>
+    <view class='h_price'>
+      <view class='hp_icon'>￥</view>
+      <view class='hp_money'>{{hotel.money}}</view>
+      <view class='hp_Y'>元</view>
+    </view>
+    <view class='h_tips'>亲！欢迎下次光临！</view>
+  </view>
+  <view class='hotel'>
+    <view class='con'>
+      <view class='hc_l'>
+        <text class='hcl_t'>{{hotel.name}}</text>
+<<<<<<< HEAD
+        <text class='hcl_b'>{{hotel.addr}}</text>
+=======
+        <text class='hcl_b'>重庆市南岸区万达写字楼2栋17楼</text>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+    </view>
+    <view class='con con_list' wx:for="{{hotel.room}}" wx:key="und">
+      <view class='con_l'>
+        <view class='roomName' wx:if='{{index == 0}}'>{{item.roomName}}</view>
+        <view class='roomNo'>{{item.roomNo}}</view>
+        <view class='con_date'>
+          <!-- <view class='cd_start'>入住：{{item.starTime}}(周五)</view>
+          <view class='cd_end'>离店：{{item.endTime}}(周六)</view> -->
+<<<<<<< HEAD
+          <view class='cd_start'><text class='cd_title'>入住：</text>{{item.starTime}}({{item.star_week}})</view>
+          <view class='cd_end'><text class='cd_title'>离店：</text>{{item.endTime}}({{item.end_week}})</view>
+=======
+          <view class='cd_start'><text class='cd_title'>入住：</text>08-03-19 18:00(周五)</view>
+          <view class='cd_end'><text class='cd_title'>离店：</text>08-03-19 18:00(周六)</view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+          <view class='cd_integral'>
+            <text class='cd_title'>获得易用豆：</text><text style='color:#f95420'>{{item.integral}}</text><view class='cdi_img'><image src='../../images/dou.png'></image></view>
+          </view>
+        </view>
+      </view>
+    </view> 
+    <view class='con_integral'>
+      <view class='cdi_text'>共获得易用豆：<text style='color:#f95420;'>{{hotel.integral}}</text></view>
+      <view class='cdi_img'><image src='../../images/dou.png'></image></view>
+    </view> 
+  </view>
+
+   <view class='hotel people'>
+    <view class='peoTitle'>预订人信息</view>
+    <view class='peo_con'>
+      <view class='pc_l'>预订人：</view>
+      <view class='pc_r'>{{people.name}}</view>
+    </view>
+    <view class='peo_con'>
+      <view class='pc_l'>联系电话：</view>
+      <view class='pc_r'>{{people.tel}}</view>
+    </view>
+    <view class='peo_con'>
+      <view class='pc_l'>预计到店：</view>
+      <view class="pc_r">{{people.arrvieTime}}</view>
+    </view>
+  </view> 
+
+  <view class='hotel orderInfo'>
+    <view class='oiTitle'>订单详情</view>
+    <view class='oi_con'>
+      <view class='oic_l'>订单号：</view>
+      <view class="oic_r">{{orderInfo.orderNo}}</view>
+    </view>
+    <view class='oi_con'>
+      <view class='oic_l'>下单时间：</view>
+      <view class="oic_r">{{orderInfo.orderDate}}</view>
+    </view>
+  </view>
+</view>

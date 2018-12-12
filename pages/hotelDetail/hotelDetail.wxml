@@ -1,0 +1,278 @@
+<view class='main'>
+<<<<<<< HEAD
+  <view wx:if='{{imgUrls.length > 0}}'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+=======
+  <!-- 头部图片集 -->
+  <view class='hotel_imgs' wx:if='{{imgUrls.length > 0}}'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current='{{swiper_current}}' interval="{{interval}}" duration="{{duration}}" bindchange='changeCurrent'>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item.pic}}" class="slide-image" width="100%" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+<<<<<<< HEAD
+=======
+    <view class='hi_hotelName'>
+      <view class='hotl_name'>{{hotel_name}}</view>
+      <view class='hi_page'>{{swiper_current + 1}}/{{imgUrls.length}}</view>
+    </view>
+    <view class='hi_star' bindtap='collection' wx:if="{{hotel_star}}"><image src='../../images/hd_star_true.png'></image></view>
+    <view class='hi_star' bindtap='collection' wx:else><image src='../../images/hd_star_false.png'></image></view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+  </view>
+  <view wx:else>
+    <view class='topImg'><image src='{{hotel_img}}'></image></view>
+  </view>
+
+<<<<<<< HEAD
+  <view class='hotel'>
+    <view class='hot_con h_hotel'>
+      <view class='hc_left'>
+        <view class='hotel_icon1'>
+          <image src='../../images/hotel_new.png'></image>
+        </view>
+        <view class='hotl_name'>{{hotel_name}}</view>
+      </view>
+      <!-- <view class='hc_right' bindtap='moreHotel' wx:if='{{last_hotel == null}}'>
+        更多酒店
+        <view class='hcr_icon'><image src='../../images/youjiantou2.png'></image></view>
+      </view> -->
+=======
+  <!-- 酒店介绍 -->
+  <view class='hotel'>
+    <view class='hot_con h_tel h_score' wx:if='{{hotel_tel != null}}'>
+      <view class='hcs_left'>
+        <view class='hotel_icon2'>
+          <image src='../../images/score_icon.png'></image>
+        </view>
+        <view class='hotl_score'>{{hotel_score}}</view>
+      </view>
+      <view class='hc_right' bindtap='toCommentCenter'>
+        {{comments_count}}条评价
+        <view class='hcr_icon'><image src='../../images/youjiantou.png'></image></view>
+      </view>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+    </view>
+    <view class='hot_con h_tel' wx:if='{{hotel_tel != null}}'>
+      <view class='hotel_icon2'>
+        <image src='../../images/tel_new.png'></image>
+      </view>
+      <view class='hotl_tel' data-tel='{{hotel_tel}}' bindtap='getTel'>{{hotel_tel}}</view>
+    </view>
+    <view class='h_addr' wx:if='{{hotel_addr != null}}'>
+      <view class='ha_con'>
+        <view class='hotel_icon3'>
+          <image src='../../images/addr_new.png'></image>
+        </view>
+        <view class='hotl_addr'>{{hotel_addr}}</view>
+      </view>
+      <view class='map' bindtap='openMap' wx:if="{{latitude != 0 && longitude != 0 && latitude != null && longitude != null}}">
+        <view class='hc_right'>
+          导航
+          <view class='hcr_icon'><image src='../../images/youjiantou2.png'></image></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+<<<<<<< HEAD
+=======
+  <!-- 酒店提供的服务集 -->
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+  <view class='date' wx:if='{{func.length > 0}}'>
+    <view class='date_con' wx:for="{{func}}" wx:key="unique">
+      <text>{{func[index]}}</text>
+      <view class='dateHr' wx:if="{{index != func.length - 1}}"></view>
+    </view> 
+  </view>
+
+<<<<<<< HEAD
+=======
+  <!-- 日期选择 -->
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+  <view class='time'>
+    <view class='time_choose' bindtap='toCalendar'>
+      <view class='tc_star'>
+        <view class='tc_icon'><image src='../../images/date.png'></image></view>
+        <view class='pickTime'>{{stText}} {{startWeek}}</view>
+<<<<<<< HEAD
+        <!-- <picker mode="date" value='startTime' start="{{nowTime}}" end="{{maxTime}}" bindchange="testPickerS">
+            <text>{{stText}} {{startWeek}}</text>
+        </picker> -->
+=======
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+      <text class='iDays'>共计{{toDays}}晚</text>
+      <view class='tc_end'>
+        <view class='tc_icon'><image src='../../images/date.png'></image></view>
+        <view class='pickTime'>{{etText}} {{endWeek}}</view>
+<<<<<<< HEAD
+        <!-- <picker mode="date" value='endTime' start="{{minEndTime}}" end="{{maxTime}}" bindchange="testPickerE">
+            <text class='chooseTimeText'>{{etText}} {{endWeek}}</text>
+        </picker> -->
+=======
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+    </view>
+  </view>
+
+<<<<<<< HEAD
+=======
+  <!-- 房型集 -->
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+  <view class='room' id='room{{ind}}' wx:for="{{roomList}}" wx:for-index="ind" wx:key="unique">
+    <view id='r{{ind}}' data-room='{{roomList[ind].roomDetail}}' data-ind='{{ind}}' data-num='{{roomList[ind].num}}' class='room_l' bindtap='toRoomDetail'>
+      <view class='rl_text'>
+        <text class='r_name'>{{roomList[ind].name}}</text>
+        <text class='r_content' wx:if='{{roomList[ind].content != ""}}'>{{roomList[ind].content}}</text>
+        <view class='r_price'>
+        <!-- 剩余{{roomList[ind].num}}间 -->
+          <view class='con' wx:if='{{roomList[ind].is_sharetime == 1}}'>分时</view>
+          <view class='icon'>￥</view>
+          <view class='money'>{{roomList[ind].price}}</view>
+          <view class='money2' wx:if='{{roomList[ind].strike_price > 0 && roomList[ind].strike_price > roomList[ind].price}}'>￥{{roomList[ind].strike_price}}</view>
+        </view>
+      </view>
+    </view>
+    <form report-submit='true' bindsubmit='comfirmOrder' data-room='{{roomList[ind]}}' class='room_r' wx:if='{{roomList[ind].num != null && roomList[ind].num > 0}}'>
+      <button class='reserve' formType="submit">预定</button>
+      <view class='rr_bottom'>仅剩{{roomList[ind].num}}间</view>
+    </form>
+    <view class='room_r' wx:else>
+      <view class='reserve reserve_no'>已售罄</view>
+      <view class='rr_bottom' wx:if='{{roomList[ind].num != null}}'>仅剩0间</view>
+<<<<<<< HEAD
+    </view> 
+  </view>
+
+=======
+    </view>
+  </view>
+  <!-- 查看更多房型 -->
+  <view class='showMore' bindtap='showMoreClick' wx:if='{{!showMoreBoo}}'>
+    <view class='sm_text'>查看全部房型</view>
+    <view class='sm_icon'><image src='../../images/sm_icon.png'></image></view> 
+  </view>
+  <!-- 查看过的人 -->
+  <!-- <view class='seeList'>
+    <view class='sl_imgs'>
+      <view class='seeList_con' wx:for="{{seeList}}" wx:key="unique"><image src='{{item.img}}'></image></view>
+    </view>
+    <view class='sl_text'>
+      <view class='st_font'>1012</view>
+      <view class='st_font'>人看过</view>
+    </view>
+  </view> -->
+
+  <!-- 评论列表 -->
+  <!-- <view class='commentList'>
+    <view class='com_con' wx:for="{{commentList}}" wx:key="unique">
+      <view class='cc_left'>
+        <view class='ccl_tx'><image src='{{item.img}}'></image></view>
+      </view>
+      <view class='cc_right'>
+        <view class='ccr_top'>
+          <view class='ccrt_left'>
+            <view class='name'>{{item.name}}</view>
+            <view class='zan' data-id='{{item.id}}' data-index='{{index}}' bindtap='zan'>
+              <view class='zan_icon'>
+                <image src='{{item.havaThumbsUp?"../../images/hotelDetail_zan2.png":"../../images/hotelDetail_zan1.png"}}'></image>
+              </view>
+              <view class='zan_num'><span style='color:#979797'>(</span>{{item.thumbsUpNum}}<span style='color:#979797'>)</span></view>
+            </view>
+          </view>
+          <view class='ccrt_right'>{{item.time}}</view>
+        </view>
+        <view class='ccr_bottom'>
+          <view class='ccrb_text'>{{item.content}}</view>
+          <view class='ccrb_imgs' wx:if='{{item.imgs.length > 0}}'>
+            <view class='content_img' wx:for="{{item.imgs}}" wx:key="unique" wx:for-index="ind" wx:for-item="items">
+              <image src='{{items.url}}'></image>
+            </view>
+          </view>
+        </view>
+        <view class='official' wx:if='{{item.comment != undefined}}'>
+          <view class='jian'></view>
+          <span class='official_title'>易住宝：</span>{{item.comment}}
+        </view>
+      </view>
+    </view>
+    <view class='moreComment' bindtap='toCommentCenter' wx:if='{{commentList > 0}}'>查看更多评论<view class='mc_icon'><image src='../../images/moreComment.png'></image></view></view>
+  </view> -->
+
+  <!-- 附近的酒店 -->
+  <view class='nearbyHotel' wx:if='{{nearbyHotel.length > 0}}'>
+    <view class='nh_title'>附近推荐酒店</view>
+    <view class='nh_hotles'>
+      <view class='nhh_con' wx:for="{{nearbyHotel}}" wx:key="unique">
+        <view class='nhhc_img'><image src='{{item.img}}'></image></view>
+        <view class='nhhc_con'>
+          <view class='ncc_name'>{{item.name}}</view>
+          <view class='ncc_score'>{{item.score}}</view>
+          <view class='ncc_addr'>{{item.addr}}</view>
+          <view class='ncc_price'>
+            <span class='np_one'>￥</span>{{item.price}}<span class='np_two'>起</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 遮挡层 -->
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+  <view class='bc' wx:if='{{rdClick}}' bindtap='unshow'></view>
+  <!-- 房间详情弹出层 -->
+  <view class='roomDetail' wx:if='{{rdClick}}'>
+    <view class='title' bindtap='unshow'>
+      <view></view>
+      <view class='title_text'>{{roomDetail.name}}</view>
+      <view class='close'><image src='../../images/close.png'></image></view>
+    </view>
+    <view wx:if='{{roomDetail.imgUrls.length > 0}}'>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{roomDetail.imgUrls}}" wx:key="unique">
+          <swiper-item>
+            <image src="{{item.pic}}" class="slide-image" width="100%" height="150"/> 
+          </swiper-item>
+        </block>
+      </swiper> 
+    </view>
+    <view class='specifications'>
+      <view class='sft'>
+        <view class='sftc_l' wx:for="{{roomDetail.specs}}" wx:key="unique" wx:if='{{item.value != null}}'>
+          <view class='sftcl_title'>{{item.key}}</view>
+          <view class='sftcl_con'>{{item.value}}</view>
+        </view>
+      </view>
+      <view class='refund' wx:if='{{roomDetail.reserve_rule != null}}'>
+        <view class='reFundTitle'>预定规则</view>
+        <view class='refundCon'>
+          <view class='rf_con'>
+            <text class='rf_text'>{{roomDetail.reserve_rule}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='use' wx:if='{{roomDetail.cancel_rule != null}}'>
+        <view class='useTitle'>取消规则</view>
+        <view class='useCon'>
+          <view class='use_for'>
+            <text class='uc_con'>{{roomDetail.cancel_rule}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='roomDetailFooter'>
+      <view class='rf_l'>
+        <view class='rf_l_l'>￥</view>
+        <view class='rf_l_r'>{{roomDetail.money}}</view>
+      </view>
+      <form wx:if='{{roomDetail.num > 0}}' class='rf_r' report-submit='true' data-roomDetail='{{roomDetail}}' bindsubmit="toRoomDetail_comfirmOrder">
+        <button formType="submit">预定</button>
+      </form>
+      <view class='rf_r rf_no' wx:else>已售罄</view>
+    </view>
+  </view>
+</view>

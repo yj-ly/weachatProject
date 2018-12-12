@@ -1,0 +1,6 @@
+<view class='main'>
+  <view class='content'>
+    <view class='con_top'><image src='../../images/comment_success.png'></image></view>
+    <view class='con_bottom' bindtap='more'>查看更多评论</view>
+  </view>
+</view>

@@ -1,0 +1,90 @@
+<view class='main'>
+  <!-- 酒店 -->
+  <view class='changeShow_2'>
+    <view class='content'>
+      <view class='hotel_con'>
+        <view class='hotel_img'>
+          <image src='{{hotel.img}}'></image>
+        </view>
+        <view class='hotel_content'>
+          <view class='hc_left'>
+            <view class='hcl_1' wx:if='{{hotel.hotel_name != null}}'>
+              <view class='hcl1_left'>
+                <view class='hotel_name'>{{hotel.hotel_name}}</view>
+                <view class='hotel_evaluate'>4.8分 超赞</view>
+              </view>
+              <view class='comment' wx:if='{{!hotel.collection}}' bindtap='collection'>+ 收藏</view>
+            </view>
+            <view class='hcl_label'>
+              <view class='labels' wx:for-item="item_label" wx:for="{{hotel.label}}" wx:key="unique">{{item_label}}</view>
+            </view>
+            <view class='hcl_2' wx:if='{{hotel.tel != null}}'>
+              <view class='hotel_tel'>{{hotel.tel}}</view> 
+            </view>
+            <view class='hcl_3'>
+              <view class='hcl3_left'>
+                <view class='hotel_addr'>订单号:{{hotel.no}}</view> 
+              </view>
+              <view class='hcr_con' wx:if='{{hotel.price != null}}'>
+                <view class='hcrc_l'>￥</view>
+                <view class='hcrc_c'>{{hotel.price}}</view>
+              </view> 
+            </view>
+          </view>
+        </view> 
+      </view>
+    </view>
+  </view>
+
+  <!-- 评分 -->
+  <view class='score'>
+    <view class='score_left'>
+      <view class='sl_top'>评分</view>
+      <view class='sl_bottom'>满意程度</view>
+    </view>
+    <view class='score_right'>
+      <view class='stars' wx:for='{{stars}}' wx:key='xxx'>
+        <image bindtap='starsClick' data-index='{{index}}' wx:if='{{item}}' src='../../images/star_true.png'></image>
+        <image bindtap='starsClick' data-index='{{index}}' wx:else src='../../images/star_false.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 评论内容 -->
+  <view class='comment_con'>
+    <!-- <view class='comment_title'>请选择标签</view>
+
+    <view class='comment_labels'>
+      <view class='{{item.choose?"cl_con cl_con_true":"cl_con"}}' wx:for='{{labels}}' wx:key='xxx' data-index='{{index}}' bindtap='labelsClick'>
+        <view class='clc_text'>{{item.name}}</view>
+        <view class='clc_icon'>
+          <image src='../../images/good_true.png' wx:if='{{item.choose}}'></image>
+          <image src='../../images/good_false.png' wx:else></image>
+        </view>
+      </view>
+    </view> -->
+
+    <view class='comment_input'>
+      <textarea placeholder='说点什么吧...' value='{{textareaValue}}' bindinput='textUpState' />
+    </view>
+
+    <view class='photos'>
+      <view class='noPhoto' bindtap='addPhoto' wx:if='{{photos.length == 0}}'>
+        <view class='np_left'><image src='../../images/noPhoto.png'></image></view>
+        <view class='np_right'>
+          <view class='npr_t'>上传图片</view>
+          <view class='npr_b'>内容丰富的评价有机会成为优质评价哦</view>
+        </view>
+      </view>
+      <view class='havePhoto' wx:else>
+        <view class='hp_con' wx:for='{{photos}}' wx:key='xxx'>
+          <view class='delete_con' data-index='{{index}}' bindtap='reducePhotos'></view>
+          <view class='delete'></view>
+          <image src='{{item}}' data-img='{{item}}' bindtap='watchPhoto'></image>
+        </view>
+        <view class='hp_con hp_con_add' wx:if='{{photos.length < 9}}' bindtap='addPhoto'><image src='../../images/addPhoto.png'></image></view>
+      </view>
+    </view>
+    <view class='button' bindtap='submit'>提交</view>
+  </view>
+</view>

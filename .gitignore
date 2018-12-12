@@ -1,0 +1,11 @@
+.idea
+.idea/
+.DS_Store
+node_modules/
+.project
+dist/
+vendor/
+storage/
+public/plugins/
+npm-debug.log
+public/js/app.js

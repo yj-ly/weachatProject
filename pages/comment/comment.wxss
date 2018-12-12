@@ -1,0 +1,519 @@
+page{
+  background: #ebeaea;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*酒店列表*/
+.content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ececec;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.content_null{
+  height: 887rpx;
+}
+.hotel_null{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hn_icon{
+  width: 76rpx;
+  height: 96rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 20rpx auto;
+}
+.hn_icon image{
+  width: 100%;
+  height: 100%;
+}
+.hn_text{
+  color: #909090;
+  font-size: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.hn_text::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50rpx;
+  height: 2rpx;
+  background: #909090;
+  left: -59rpx;
+  bottom: 15rpx;
+}
+.hn_text::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50rpx;
+  height: 2rpx;
+  background: #909090;
+  right: -59rpx;
+  bottom: 15rpx;
+}
+.hotel_con{
+  width: 100%;
+  height: auto;
+  margin-bottom: 10rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.hotel_con:last-child{
+  margin-bottom: 0;
+}
+
+/*纵向显示*/
+.hotel_img{
+  width: 100%;
+  height: 380rpx;
+  display: flex;
+  flex-direction: column;
+}
+.hotel_img image{
+  width: 100%;
+  height: 100%;
+}
+.hotel_content{
+  padding: 27rpx 26rpx 29rpx 23rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.hc_left{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hcl_1{
+  display: flex;
+  flex-direction: row;
+}
+.hotel_name{
+  font-size: 30rpx;
+  color: #2272a5;
+  margin-right: 22rpx;
+}
+.hotel_distance{
+  font-size: 24rpx;
+  color: #ff840b;
+  line-height: 48rpx;
+  text-align: right;
+}
+.hcl_2{
+  display: flex;
+  flex-direction: row;
+}
+.hc_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.hotel_icon{
+  width: 17rpx;
+  height: 17rpx;
+  margin: auto 0;
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.hotel_icon image{
+  width: 100%;
+  height: 100%;
+}
+.hotel_tel{
+  color: #555555;
+  font-size: 24rpx;
+}
+.hcl_3{
+  display: flex;
+  flex-direction: row;
+}
+.hotel_icon_addr{
+  width: 16rpx;
+  height: 22rpx;
+  margin: auto 0;
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.hotel_icon_addr image{
+  width: 100%;
+  height: 100%;
+}
+.hotel_addr{
+  color: #676767;
+  font-size: 24rpx;
+  width: 100%;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+.hcr_con{
+  display: flex;
+  flex-direction: row;
+  height: 32rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.hcrc_l{
+  color: #f95420;
+  font-size: 25.27rpx;
+  line-height: 38rpx;
+}
+.hcrc_c{
+  color: #f95420;
+  font-size: 42.11rpx;
+  line-height: 24rpx;
+  margin-right: 4rpx;
+}
+.hcrc_r{
+  color: #7a7a7a;
+  font-size: 25.27rpx;
+  line-height: 32rpx;
+}
+.hotel_evaluate{
+  font-size: 28rpx;
+  color: #18cfc9;
+  line-height: 46rpx;
+}
+.hcl1_left{
+  display: flex;
+  flex-direction: row;
+}
+.hcl_label{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.labels{
+  height: 24rpx;
+  line-height: 24rpx; 
+  padding: 0 12rpx;
+  font-size: 18rpx;
+  color: #ff840b;
+  border: 1rpx solid #ff840b;
+  margin-right: 8rpx;
+}
+.labels:last-child{
+  margin-right: 0;
+}
+.comment{
+  font-size: 25rpx;
+  color: #ffe742;
+  border: 1rpx solid #ffe742;
+  padding: 5rpx 8rpx;
+  box-sizing: border-box;
+}
+
+/*横向显示*/
+.changeShow_2 .content{
+  padding: 0;
+  margin-bottom: 8rpx;
+}
+.changeShow_2 .hotel_con{
+  display: flex;
+  flex-direction: row;
+  border-radius: 0;
+}
+.changeShow_2 .hotel_img{
+  width: 215rpx;
+  height: 215rpx;
+  display: flex;
+  flex-direction: row;
+}
+.changeShow_2 .hotel_content{
+  width: 539rpx;
+  padding: 23rpx 18rpx;
+}
+.changeShow_2 .hc_left{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.changeShow_2 .hcl_1{
+  justify-content: space-between;
+}
+.changeShow_2 .hotel_name{
+  max-width: 250rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.changeShow_2 .hcl_3{
+  justify-content: space-between;
+}
+.changeShow_2 .hcl3_left{
+  display: flex;
+  flex-direction: row;
+  max-width: 374rpx;
+}
+.changeShow_2 .hcr_con{
+  position: relative;
+}
+
+/*评分*/
+.score{
+  width: 100%;
+  height: 162rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.score_left{
+  width: 174rpx;
+  height: 100%;
+  padding: 37rpx 0 36rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sl_top{
+  font-size: 40rpx;
+  color: #525252;
+  text-align: left;
+}
+.sl_bottom{
+  font-size: 30rpx;
+  color: #8a8a8a;
+  text-align: left;
+}
+.score_right{
+  display: flex;
+  flex-direction: row;
+  padding-top: 77rpx;
+  box-sizing: border-box;
+}
+.stars{
+  width: 53rpx;
+  height: 51rpx;
+  display: flex;
+  flex-direction: column;
+  margin-right: 32rpx;
+}
+.stars:last-child{
+  margin-right: 0;
+}
+.stars image{
+  width: 100%;
+  height: 100%;
+}
+
+/*评论内容*/
+.comment_con{
+  width: 100%;
+  min-height: 820rpx;
+  background: #fff;
+  padding: 0 40rpx 90rpx 40rpx;
+  box-sizing: border-box;
+}
+.comment_title{
+  width: 100%;
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #979797;
+}
+/*标签*/
+.comment_labels{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cl_con{
+  display: flex;
+  flex-direction: row;
+  height: 45rpx;
+  padding-left: 26rpx;
+  padding-right: 26rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #979797;
+  border-radius: 50rpx;
+  margin-left: 47rpx;
+  margin-bottom: 20rpx;
+}
+.cl_con_true{
+  background: #1e78af;
+  border: 2rpx solid #1e78af;
+}
+.cl_con:nth-child(3){
+  margin-left: 94rpx;
+}
+.clc_text{
+  font-size: 24rpx;
+  color: #979797;
+  line-height: 41rpx;
+}
+.cl_con_true .clc_text{
+  color: #fff;
+}
+.clc_icon{
+  width: 26rpx;
+  height: 26rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 auto 13rpx;
+}
+.clc_icon image{
+  width: 100%;
+  height: 100%;
+}
+
+.comment_input{
+  margin-top: 37rpx;
+  width: 100%;
+  height: 160rpx;
+  overflow-y: scroll;
+  padding: 19rpx 16rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #b4b4b4;
+  border-radius: 10rpx;
+}
+.comment_input textarea{
+  width: 100%;
+  height: 100%;
+  font-size: 26rpx;
+  color: #9d9d9d;
+}
+
+.photos{
+  width: 100%;
+  min-height: 230rpx;
+  padding-top: 28rpx;
+  padding-bottom: 63rpx;
+  box-sizing: border-box;
+}
+.noPhoto{
+  display: flex;
+  flex-direction: row;
+}
+.np_left{
+  width: 140rpx;
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  margin-right: 32rpx;
+}
+.np_left image{
+  width: 100%;
+  height: 100%;
+}
+.np_right{
+  width: 498rpx;
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36rpx 0 28rpx 0;
+  box-sizing: border-box;
+}
+.npr_t{
+  font-size: 32rpx;
+  color: #5d5d5d;
+}
+.npr_b{
+  font-size: 24rpx;
+  color: #8f8e94;
+}
+.havePhoto{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hp_con{
+  width: 202rpx;
+  height: 202rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-right: 27rpx;
+  margin-bottom: 27rpx;
+  position: relative;
+  border: 1rpx solid #e0e0e0;
+}
+.hp_con_add{
+  border: none;
+}
+.delete_con{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  right: -25rpx;
+  top: -25rpx;
+  z-index: 10;
+  background: #000000;
+  opacity: .5;
+  border-radius: 50%;
+}
+.delete{
+  opacity: 1;
+  z-index: 11;
+  position: absolute;
+  top: 13rpx;
+  right: 5rpx;
+  display: inline-block;
+  width: 18rpx;
+  height:5rpx;
+  background: #fff;
+  line-height: 0;
+  font-size:0;
+  vertical-align: middle;
+  transform: rotate(45deg);
+}
+.delete:after{
+  content:'/';
+  display:block;
+  width: 18rpx;
+  height:5rpx;
+  background: #fff;
+  transform: rotate(-90deg);
+}
+.hp_con image{
+  width: 100%;
+  height: 100%;
+}
+.hp_con:nth-child(3),.hp_con:nth-child(6),.hp_con:nth-child(9){
+  margin-right: 0;
+}
+
+.button{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  background: #1e78af;
+  border-radius: 15rpx;
+}

@@ -1,0 +1,43 @@
+<view class='main'>
+  <view class='top'>
+    <view class='t_name'>{{hotelData.name}}</view>
+    <view class='tn_hr'></view>
+    <view class='hotel_tel'>
+      <view class='ht_left'>
+        <view class='htl_one'>
+          <view class='ho_icon'><image src='../../images/tel_new.png'></image></view>
+          <view class='ho_text'>{{hotelData.tel}}</view>
+        </view>
+        <view class='htl_two'>
+          <view class='ht_icon' wx:if='{{hotelData.payType[0].money}}'><image src='../../images/money.png'></image></view>
+          <view class='ht_text wx' wx:if='{{hotelData.payType[1].wx}}'>微信</view>
+          <view class='ht_text dou' wx:if='{{hotelData.payType[2].dou}}'>易用豆</view>
+        </view>
+      </view>
+      <view class='ht_right'>
+        <view class='hr_hr'></view>
+        <view class='hr_icon'><image src='../../images/tel_new.png'></image></view>
+      </view>
+      <view class='hotel_tel_hr'></view>
+    </view>
+    <view class='hotel_addr'>
+      <view class='ha_left'>
+        <view class='ha_content'>
+          <view class='hal_img'>
+            <view class='hal_icon'><image src='../../images/addr_new.png'></image></view>
+          </view>
+          <view class='hal_text'>{{hotelData.addr}}</view>
+        </view>
+      </view>
+      <view class='ha_right'>
+        <view class='har_hr'></view>
+         <view class='har_icon'><image src='../../images/location.png'></image></view> 
+      </view>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='bot_title'>酒店介绍</view>
+    <view class='bot_hr'></view>
+    <view class='bot_text'><view class='space'></view>{{hotelData.introduce}}</view>
+  </view>
+</view>

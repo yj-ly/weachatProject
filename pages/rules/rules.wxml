@@ -1,0 +1,37 @@
+<view class='rules'>
+  <view class='title'>
+    <view class='title_left'><view class='tl_hr'></view></view>
+    <view class='title_center'>酒店分时住宿规则</view>
+    <view class='title_right'><view class='tr_hr'></view></view>
+  </view>
+  <view class='content'>
+    <view class='con'>
+      <view class='con_top'>
+        <view class='tx'><image src='../../images/tx1.png'></image></view>
+        <view class='question'>住店分时它的规则到底是什么呀？</view>
+      </view>
+      <view class='con_bottom'>答：易用豆=【24(小时)-实际入住时间(酒店最低消费基数20个小时)】*实时房价/24(小时)</view>
+    </view>
+    <view class='con'>
+      <view class='con_top'>
+        <view class='tx'><image src='../../images/tx2.png'></image></view>
+        <view class='question'>你说的这个易用豆是怎么使用的呢？</view>
+      </view>
+      <view class='con_bottom'>答：易用豆不可提现，仅用于支付房费，易用豆不足支付房费时不可通过补差形式进行支付。</view>
+    </view>
+    <view class='con'>
+      <view class='con_top'>
+        <view class='tx'><image src='../../images/tx3.png'></image></view>
+        <view class='question'>住店分时它的规则到底是什么呀？</view>
+      </view>
+      <view class='con_bottom' style='line-height:170rpx;padding-top:0'>答：1易用豆=1元人民币</view>
+    </view>
+    <view class='con'>
+      <view class='con_top'>
+        <view class='tx'><image src='../../images/tx4.png'></image></view>
+        <view class='question'>住店的时间是怎么计算的？</view>
+      </view>
+      <view class='con_bottom'>答：住店分时时间在单个小时内不足半小时按半小时计算，超过半小时按1小时计算</view>
+    </view>
+  </view>
+</view>

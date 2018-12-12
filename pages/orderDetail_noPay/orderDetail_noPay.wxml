@@ -1,0 +1,87 @@
+<view class='main'>
+  <view class='header'>
+    <view class='h_img'><image src='../../images/payBc.png'></image></view>
+    <view class='h_title'>待付款</view>
+    <view class='h_price'>
+      <view class='hp_icon'>￥</view>
+      <view class='hp_money'>{{hotel.money}}</view>
+      <view class='hp_Y'>元</view>
+    </view>
+    <view class='h_tips'>亲，请在{{syTime}}前付款，否则订单将自动取消</view>
+  </view>
+  <view class='hotel'>
+    <view class='con'>
+      <view class='hc_l'>
+        <text class='hcl_t'>{{hotel.name}}</text>
+<<<<<<< HEAD
+        <text class='hcl_b'>{{hotel.addr}}</text>
+=======
+        <text class='hcl_b'>重庆市南岸区万达写字楼2栋17楼</text>
+>>>>>>> 66651f8a6fab4fb8b88c5543761810d39b94b8a7
+      </view>
+    </view>
+    <view class='con con_list'>
+      <view class='con_l'>
+        <view class='roomName'>{{hotel.room.roomName}}<text class='rn_num'>({{hotel.room.num}}间)</text></view>
+        <view class='con_date'>
+          <view class='cd_start'>入住:{{hotel.room.starTime}}({{hotel.room.star_week}})</view>
+          <view class='cd_end'>离店:{{hotel.room.endTime}}({{hotel.room.end_week}})</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='hotel people'>
+    <view class='peoTitle'>预订人信息</view>
+    <view class='peo_con'>
+      <view class='pc_l'><view>预</view><view>订</view><view>人</view></view>
+      <view class='pc_r'>：{{people.name}}</view>
+    </view>
+    <view class='peo_con'>
+      <view class='pc_l'><view>联</view><view>系</view><view>电</view><view>话</view></view>
+      <view class='pc_r'>：{{people.tel}}</view>
+    </view>
+    <view class='peo_con'>
+      <view class='pc_l'><view>预</view><view>计</view><view>到</view><view>店</view></view>
+      <view class="pc_r">：{{people.arrvieTime}}</view>
+    </view>
+  </view>
+
+  <view class='hotel cards'>
+    <view class='cardTitle'>付款方式</view>
+    <view id='r0' class='card_con' bindtap='payChoose'>
+      <view class='cc_l'>
+        <view class='ccl_icon'><image src='../../images/weChat.png'></image></view>
+        <view class='ccl_text'>微信支付</view>
+      </view>
+       <view class='cc_r' wx:if='{{choosePay[0]}}'><image src='../../images/radio_true.png'></image></view> 
+       <view class='cc_r' wx:else><image src='../../images/radio_false.png'></image></view> 
+    </view>
+    <view id='r1' class='card_con' bindtap='payChoose' wx:if='{{hotel.money <= hotel.dou}}'>
+      <view class='cc_l'>
+        <view class='ccl_icon'><image src='../../images/dou.png'></image></view>
+        <view class='ccl_text'>易用豆支付<text style='color:red;font-size:25rpx'>({{hotel.dou}})</text></view>
+      </view>
+        <view class='cc_r' wx:if='{{choosePay[1]}}'><image src='../../images/radio_true.png'></image></view> 
+        <view class='cc_r' wx:else><image src='../../images/radio_false.png'></image></view> 
+      </view> 
+    <view id='r2' class='card_con' wx:else>
+      <view class='cc_l'>
+        <view class='ccl_icon'><image src='../../images/dou-no.png'></image></view>
+        <view class='ccl_text cantchooseText'>易用豆支付<text style='color:#a03232;font-size:25rpx'>({{hotel.dou}})</text></view>
+      </view>
+       <view class='cc_r' wx:if='{{choosePay[1]}}'><image src='../../images/radio_true.png'></image></view> 
+       <view class='cc_r' wx:else><image src='../../images/radio_false.png'></image></view> 
+    </view>
+  </view>
+
+  <view class='footer'>
+    <form class='fl' report-submit='true' bindsubmit="noPay">
+      <button formType="submit">取消订单</button>
+    </form>
+    <form class='fr' report-submit='true' bindsubmit="payFunc">
+      <button formType="submit">付款</button>
+    </form>
+  </view>
+  <view class='bc2' wx:if='{{cantClick}}'></view>
+</view>

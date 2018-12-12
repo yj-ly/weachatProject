@@ -1,0 +1,52 @@
+<view class='main'>
+  <view class='main_top'>
+    <view class='mt_content'>
+      <view class='mt_num'>{{score.score}}<view class='mtNum_text'>分</view></view>
+      <view class='star_con'>
+        <view class='score_right'>
+          <view class='stars' wx:for='{{stars}}' wx:key='xxx'>
+            <image bindtap='starsClick' data-index='{{index}}' wx:if='{{item}}' src='../../images/star_true.png'></image>
+            <image bindtap='starsClick' data-index='{{index}}' wx:else src='../../images/star_false.png'></image>
+          </view>
+        </view>
+        <view class='star_con_text'>综合评分</view>
+      </view>
+    </view>
+  </view>
+  <!-- 评论列表 -->
+  <view class='commentList'>
+    <view class='com_con' wx:for="{{commentList}}" wx:key="unique">
+      <view class='cc_left'>
+        <view class='ccl_tx'><image src='{{item.img}}'></image></view>
+      </view>
+      <view class='cc_right'>
+        <view class='ccr_top'>
+          <view class='ccrt_left'>
+            <view class='name'>{{item.name}}</view>
+            <view class='zan' data-index='{{index}}' bindtap='zan'>
+              <view class='zan_icon'>
+                <image src='{{item.havaThumbsUp?"../../images/hotelDetail_zan2.png":"../../images/hotelDetail_zan1.png"}}'></image>
+              </view>
+              <view class='zan_num'><span style='color:#979797'>(</span>{{item.thumbsUpNum}}<span style='color:#979797'>)</span></view>
+            </view>
+          </view>
+          <view class='ccrt_right'>{{item.time}}</view>
+        </view>
+        <view class='ccr_bottom'>
+          <view class='ccrb_text'>{{item.content}}</view>
+          <view class='ccrb_imgs' wx:if='{{item.imgs.length > 0}}'>
+            <view class='content_img' wx:for="{{item.imgs}}" wx:key="unique"
+             wx:for-index="ind" wx:for-item="items" bindtap='watchPhoto' data-imgList='{{item.imgs}}' data-img='{{items}}' data-index='{{ind}}'>
+              <image src='{{items}}'></image>
+            </view>
+          </view>
+        </view>
+        <view class='official' wx:if='{{item.comment != undefined}}'>
+          <view class='jian'></view>
+          <span class='official_title'>易住宝：</span>{{item.comment}}
+        </view>
+      </view>
+    </view>
+    <view class='moreComment' bindtap='more' wx:if='{{canMore}}'>查看更多评论<view class='mc_icon'><image src='../../images/search_jt.png'></image></view></view>
+  </view>
+</view>

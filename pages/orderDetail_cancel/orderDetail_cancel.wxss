@@ -1,0 +1,292 @@
+/* pages/pay/pay.wxss */
+.main{
+  width: 100%;
+  height: 100%;
+  background: #ececec;
+  position: relative;
+}
+.header{
+  width: 100%;
+  height: 349rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70rpx;
+  box-sizing: border-box;
+}
+.h_title{
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+  z-index: 1;
+}
+.h_price{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 10rpx;
+}
+.hp_icon{
+  color: #fff;
+  font-size: 45rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 6rpx;
+  box-sizing: border-box;
+}
+.hp_money{
+  color: #fff;
+  font-size: 65rpx;
+  margin-right: 5rpx;
+}
+.hp_Y{
+  color: #fff;
+  font-size: 45rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 8rpx;
+  box-sizing: border-box;
+}
+.h_img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.h_img image{
+  width: 100%;
+  height: 100%;
+}
+.h_tips{
+  color: #fdff6a;
+  font-size: 24rpx;
+  text-align: center;
+  z-index: 1;
+}
+
+/*酒店板块*/
+.hotel{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 0 25rpx;
+  margin-bottom: 16rpx;
+}
+.hotel .con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 1px dashed #b2b2b2;
+  padding: 30rpx 0 25rpx 0;
+}
+.hotel .con:last-child{
+  border-bottom: none;
+}
+.hc_l{
+  display: flex;
+  flex-direction: column;
+}
+.hcl_t{
+  font-size: 32rpx;
+  color: #424141;
+  font-weight: 600;
+  margin-bottom: 25rpx;
+}
+.hcl_b{
+  font-size: 28rpx;
+  color: #616161;
+}
+.con_list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.con_l{
+  display: flex;
+  flex-direction: column;
+}
+.roomName{
+  display: flex;
+  flex-direction: row;
+  color: #424141;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  font-weight: 600
+}
+.rn_num{
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  line-height: 46rpx;
+}
+.con_date{
+  display: flex;
+  flex-direction: row;
+}
+.cd_start{
+  color: #5d5d5d;
+  font-size: 28rpx;
+}
+.cd_end{
+  color: #5d5d5d;
+  font-size: 28rpx;
+  margin-left: 44rpx;
+}
+
+/*预定信息*/
+.people{
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx;
+}
+.peoTitle{
+  color: #424141;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  font-weight: 600;
+}
+.peo_con{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8rpx;
+}
+.peo_con:last-child{
+  margin-bottom: 0;
+}
+.pc_l{
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #616161;
+  line-height: 50rpx;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pc_r{
+  font-size: 26rpx;
+  color: #616161;
+  line-height: 50rpx;
+  text-align: left;
+}
+
+/*订单详情*/
+.orderInfo{
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx;
+}
+.oiTitle{
+  color: #424141;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  font-weight: 600;
+}
+.oi_con{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8rpx;
+}
+.oic_l{
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #616161;
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.oic_r{
+  font-size: 26rpx;
+  color: #616161;
+  line-height: 50rpx;
+  text-align: left;
+}
+
+/*支付信息*/
+.refund{
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx;
+}
+.rfTitle{
+  color: #424141;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  font-weight: 600;
+}
+.refund_content{
+  display: flex;
+  flex-direction: column;
+}
+.rf_con{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8rpx;
+}
+.rfc_l{
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #616161;
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.rfc_r{
+  font-size: 26rpx;
+  color: #616161;
+  line-height: 50rpx;
+  text-align: left;
+}
+.rfc_status{
+  color: #f41919;
+}
+.rfc_pt{
+  display: flex;
+  flex-direction: row;
+}
+.rfcr_img{
+  width: 35rpx;
+  height: 30rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+.rfcr_img image{
+  width: 100%;
+  height: 100%;
+}
+.rfcr_text{
+  color: #616161;
+  font-size: 28rpx;
+  margin-left: 5rpx;
+  line-height: 50rpx;
+  text-align: left;
+}
+/*脚部*/
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+.footer view{
+  text-align: center;
+  line-height: 98rpx;
+  width: 100%;
+  height: 100%;
+  background: #076299;
+  color: #fff;
+  font-size: 32rpx;
+}

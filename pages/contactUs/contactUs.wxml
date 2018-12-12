@@ -1,0 +1,17 @@
+<view class='cu_main'>
+  <view class='contentList'>
+    <view class='con' data-index='{{index}}' wx:for="{{QAList}}" wx:key="unique" bindtap='clickQA'>
+      <view class='con_top' style='{{index == choose ? "padding-bottom:20rpx" : "padding-bottom:0"}}'>
+        <view class='ct_left'>
+          <view class='{{index == choose ? "jt jt_choose" : "jt"}}'><image src='../../images/severs.png'></image></view>
+        </view>
+        <view class='ct_right'>{{item.question}}</view>
+      </view>
+      <view class='{{index == choose ? "con_bottom con_bottom_choose" : "con_bottom"}}'><view>{{item.answer}}</view></view>   
+    </view>
+  </view>
+  <view class='button'>
+    <button open-type='contact'>呼叫客服</button>
+    <view class='tel'>客服电话：023-81320127</view>
+  </view>
+</view>
